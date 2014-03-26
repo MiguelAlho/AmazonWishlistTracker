@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "src\AmazonWishlistTracker.Website\Website.csproj", "{0BB64244-B08A-4202-82B2-2E29F0129544}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{57E185D4-6A26-4050-A315-193C8B226658}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1BCB2158-62DF-4D83-9CF1-43C50C58683D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "specs", "specs", "{82345E8C-BA67-4215-8939-8A9F602FEEAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{673C1E20-D5FA-45D6-ADFB-EBEB887D4C82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite.UnitTests", "tests\AmazonWishlistTracker.WebSite.UnitTests\WebSite.UnitTests.csproj", "{B130E818-E8D0-455F-85F7-426184102B2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazonWishlistTracker.Specs", "specs\AmazonWishlistTracker.Specs\AmazonWishlistTracker.Specs.csproj", "{822F52AD-4C99-431A-91D7-E0D04FB686D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7483A113-8738-450F-B282-61F958386D60}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BB64244-B08A-4202-82B2-2E29F0129544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BB64244-B08A-4202-82B2-2E29F0129544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BB64244-B08A-4202-82B2-2E29F0129544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BB64244-B08A-4202-82B2-2E29F0129544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B130E818-E8D0-455F-85F7-426184102B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B130E818-E8D0-455F-85F7-426184102B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B130E818-E8D0-455F-85F7-426184102B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B130E818-E8D0-455F-85F7-426184102B2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{822F52AD-4C99-431A-91D7-E0D04FB686D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{822F52AD-4C99-431A-91D7-E0D04FB686D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{822F52AD-4C99-431A-91D7-E0D04FB686D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{822F52AD-4C99-431A-91D7-E0D04FB686D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0BB64244-B08A-4202-82B2-2E29F0129544} = {1BCB2158-62DF-4D83-9CF1-43C50C58683D}
+		{822F52AD-4C99-431A-91D7-E0D04FB686D2} = {82345E8C-BA67-4215-8939-8A9F602FEEAF}
+		{B130E818-E8D0-455F-85F7-426184102B2E} = {673C1E20-D5FA-45D6-ADFB-EBEB887D4C82}
+	EndGlobalSection
+EndGlobal

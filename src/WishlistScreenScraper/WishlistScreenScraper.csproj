@@ -39,6 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\Wishlist.cs" />
+    <Compile Include="Implementation\AmazonTargets.cs" />
+    <Compile Include="Implementation\Definitions\AmazonUKParsingDefinitions.cs" />
+    <Compile Include="Implementation\WishlistParser.cs" />
+    <Compile Include="Implementation\WishlistParsingDefinitionsFactory.cs" />
+    <Compile Include="Implementation\WishlistScraperConfiguration.cs" />
+    <Compile Include="Infrastructure\IWebClient.cs" />
+    <Compile Include="Interfaces\IWishlistParser.cs" />
+    <Compile Include="Interfaces\IWishlistParsingDefinitions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

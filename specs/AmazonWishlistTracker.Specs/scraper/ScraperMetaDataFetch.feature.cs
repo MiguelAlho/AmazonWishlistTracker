@@ -32,8 +32,8 @@ namespace AmazonWishlistTracker.Specs.Scraper
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ScraperMetaDataFetch", "In order to setup the scraping process for my wishlist\r\nAs a screen scraping comp" +
-                    "onent\r\nI want to extract book category data from a wishlist page", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ScraperMetaDataFetch", "In order to setup the scraping processfor my personal wishlist\r\nAs a screen scrap" +
+                    "ing component\r\nI want to extract the list of wishlists from a wishlist page", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,15 +76,15 @@ namespace AmazonWishlistTracker.Specs.Scraper
 this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                        "base site",
-                        "http://www.amazon.co.uk"});
+                        "AmazonTarget",
+                        "Email"});
             table1.AddRow(new string[] {
-                        "wishlistId",
-                        "2OPMME7SI9MPV"});
+                        "UK",
+                        "alho@miguelalho.com"});
 #line 8
  testRunner.Given("I have configured my scraper with:", ((string)(null)), table1, "Given ");
 #line 11
- testRunner.When("I retrieve metadata for the scraper", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I retrieve the users wishlists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "wishlistName",
@@ -105,7 +105,7 @@ this.ScenarioSetup(scenarioInfo);
                         "Fiction",
                         "39ACCHDMKVKJ1"});
             table2.AddRow(new string[] {
-                        "Home and Stuff",
+                        "Home and stuff",
                         "32BRN6BOWYVID"});
             table2.AddRow(new string[] {
                         "Methodologies",
@@ -123,7 +123,7 @@ this.ScenarioSetup(scenarioInfo);
                         "PRoductivity",
                         "1O0W0NU3ZPF1J"});
             table2.AddRow(new string[] {
-                        "Progamming",
+                        "programming",
                         "2CCU7K0PHVBZ6"});
             table2.AddRow(new string[] {
                         "Psycology",

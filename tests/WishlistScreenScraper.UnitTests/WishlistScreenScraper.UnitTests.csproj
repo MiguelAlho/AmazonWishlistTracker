@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Data\emptyWishList.txt" />
     <Content Include="Data\methedologies_booklist_p2.txt" />
     <Content Include="Data\ls_2wishlists.txt" />
     <Content Include="Data\ls.txt" />

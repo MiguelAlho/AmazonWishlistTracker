@@ -135,5 +135,27 @@ namespace WishlistScreenScraper.UnitTests.Implementations
             return webClientMock;
         }
 
+        [Test]
+        public void AnEmptyWishlistReturnsAnEmptyBookList()
+        {
+            IWishlistParsingDefinitions definitions = new AmazonUKParsingDefinitions();
+            var webClientMock = WebClientMockForEmptyBookList();
+
+            IWishlistParser parser = new WishlistParser(definitions, webClientMock);
+            IList<ScrapedBook> books = parser.GetBookListForWishlist("GKBVZ2B8F57P");
+
+            Assert.IsNotNull(books);
+            Assert.IsEmpty(books);
+        }
+
+        private static IWebClient WebClientMockForEmptyBookList()
+        {
+            string html1 = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\Data\emptyWishList.txt"));
+            byte[] bytes1 = System.Text.Encoding.UTF8.GetBytes(html1);
+
+            IWebClient webClientMock = Substitute.For<IWebClient>();
+            webClientMock.DownloadData(Arg.Any<Uri>()).Returns(bytes1);
+            return webClientMock;
+        }
     }
 }

@@ -74,11 +74,13 @@ namespace WishlistScreenScraper.UnitTests.Implementations
             Assert.IsNotNull(first);
             Assert.AreEqual("Business", first.Name);
             Assert.AreEqual("13WMOM3XTAK5G", first.AwId);
+            Assert.AreEqual(47, first.BookCount);
             
             Wishlist second = wishlists[1];
             Assert.IsNotNull(second);
             Assert.AreEqual("Methodologies", second.Name);
             Assert.AreEqual("20E6BOWWE0J4T", second.AwId);
+            Assert.AreEqual(35, second.BookCount);
         }
 
         private static IWebClient WebClientMockForWishList()

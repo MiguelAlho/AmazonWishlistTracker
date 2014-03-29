@@ -88,55 +88,72 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "wishlistName",
-                        "wishlistPageId"});
+                        "wishlistPageId",
+                        "bookCount"});
             table2.AddRow(new string[] {
                         "Business",
-                        "13WMOM3XTAK5G"});
+                        "13WMOM3XTAK5G",
+                        "47"});
             table2.AddRow(new string[] {
                         "Drawing",
-                        "2G6OFE9P47AKA"});
+                        "2G6OFE9P47AKA",
+                        "16"});
             table2.AddRow(new string[] {
                         "Electronics",
-                        "1BSEQ7U2E6RBE"});
+                        "1BSEQ7U2E6RBE",
+                        "4"});
             table2.AddRow(new string[] {
                         "Engeneering and business",
-                        "2OPMME7SI9MPV"});
+                        "2OPMME7SI9MPV",
+                        "36"});
             table2.AddRow(new string[] {
                         "Fiction",
-                        "39ACCHDMKVKJ1"});
+                        "39ACCHDMKVKJ1",
+                        "52"});
             table2.AddRow(new string[] {
                         "Home and stuff",
-                        "32BRN6BOWYVID"});
+                        "32BRN6BOWYVID",
+                        "11"});
             table2.AddRow(new string[] {
                         "Methodologies",
-                        "20E6BOWWE0J4T"});
+                        "20E6BOWWE0J4T",
+                        "35"});
             table2.AddRow(new string[] {
                         "New Wish List",
-                        "2P8W7HDF4M6NR"});
+                        "2P8W7HDF4M6NR",
+                        "0"});
             table2.AddRow(new string[] {
                         "Patterns",
-                        "34GLJJOVRPDZU"});
+                        "34GLJJOVRPDZU",
+                        "16"});
             table2.AddRow(new string[] {
                         "Photography",
-                        "2WYRZAFDXJ9C2"});
+                        "2WYRZAFDXJ9C2",
+                        "7"});
             table2.AddRow(new string[] {
                         "PRoductivity",
-                        "1O0W0NU3ZPF1J"});
+                        "1O0W0NU3ZPF1J",
+                        "0"});
             table2.AddRow(new string[] {
                         "programming",
-                        "2CCU7K0PHVBZ6"});
+                        "2CCU7K0PHVBZ6",
+                        "34"});
             table2.AddRow(new string[] {
                         "Psycology",
-                        "22JADHUMCHCOZ"});
+                        "22JADHUMCHCOZ",
+                        "3"});
             table2.AddRow(new string[] {
                         "Training",
-                        "MT9A2WI1FL61"});
+                        "MT9A2WI1FL61",
+                        "3"});
             table2.AddRow(new string[] {
                         "Web and UI",
-                        "10MTFE33315HU"});
+                        "10MTFE33315HU",
+                        "29"});
             table2.AddRow(new string[] {
                         "Wish List",
-                        "GKBVZ2B8F57P"});
+                        "GKBVZ2B8F57P",
+                        "0"});
 #line 12
  testRunner.Then("the scraper should know that there are the following wishlists:", ((string)(null)), table2, "Then ");
 #line hidden

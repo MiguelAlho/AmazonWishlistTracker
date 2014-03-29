@@ -19,9 +19,14 @@ namespace AmazonWishlistTracker.WishlistScreenScraper.Implementation.Definitions
         #region regexes
         //<a href="/gp/aw/ls/ref=aw_ls\?lid=(?'amazonId'[A-Z0-9]*)">(?:<b><font color='#[A-F0-9]{6}'>)?(?'wishlistname'[\w\s]*)(?:</font></b>)?</a>
         private readonly Regex wishlistRegex = new Regex(
-                @"<a href=""/gp/aw/ls/ref=aw_ls\?lid=(?'amazonId'[A-Z0-9]*)"">(?:<b><font color='#[A-F0-9]{6}'>)?(?'wishlistname'[\w\s]*)(?:</font></b>)?</a>");
+                @"<a href=""/gp/aw/ls/ref=aw_ls\?lid=(?'amazonId'[A-Z0-9]*)"">(?:<b><font color='#[A-F0-9]{6}'>)?(?'wishlistname'[\w\s]*)(?:</font></b>)?</a>
+ <span>
+ <font color=""gray"">
+ &nbsp;\((?'bookCount'\d*)\)&nbsp;");
+
         private const string wishklistRegex_name = "wishlistname";
         private const string wishklistRegex_awid = "amazonId";
+        private const string wishklistRegex_bookCount = "bookCount";
 
         ///book regex ref: respect paragraph entries
         /*
@@ -60,7 +65,11 @@ namespace AmazonWishlistTracker.WishlistScreenScraper.Implementation.Definitions
         {
             get
             {
-                return new Func<Match, Wishlist>(Match => new Wishlist(Match.Groups[wishklistRegex_name].Value, Match.Groups[wishklistRegex_awid].Value));
+                return new Func<Match, Wishlist>(Match => 
+                    new Wishlist(
+                        Match.Groups[wishklistRegex_name].Value, 
+                        Match.Groups[wishklistRegex_awid].Value,
+                        int.Parse(Match.Groups[wishklistRegex_bookCount].Value)));
             }
         }
 

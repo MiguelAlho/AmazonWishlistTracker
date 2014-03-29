@@ -10,11 +10,13 @@ namespace AmazonWishlistTracker.WishlistScreenScraper.Dto
     {
         public object Name { get; private set; }
         public object AwId { get; private set; }
+        public object BookCount { get; private set; }
 
-        public Wishlist(string name, string amazonId)
+        public Wishlist(string name, string amazonId, int bookCount)
         {
             Name = name;
             AwId = amazonId;
+            BookCount = bookCount;
         }
     }
 }

@@ -10,23 +10,23 @@ Scenario: Prepare for book scraping
 	| UK           | alho@miguelalho.com |
 	When I retrieve the users wishlists
 	Then the scraper should know that there are the following wishlists:
-	| wishlistName             | wishlistPageId |
-	| Business                 | 13WMOM3XTAK5G  |
-	| Drawing                  | 2G6OFE9P47AKA  |
-	| Electronics              | 1BSEQ7U2E6RBE  |
-	| Engeneering and business | 2OPMME7SI9MPV  |
-	| Fiction                  | 39ACCHDMKVKJ1  |
-	| Home and stuff           | 32BRN6BOWYVID  |
-	| Methodologies            | 20E6BOWWE0J4T  |
-	| New Wish List            | 2P8W7HDF4M6NR  |
-	| Patterns                 | 34GLJJOVRPDZU  |
-	| Photography              | 2WYRZAFDXJ9C2  |
-	| PRoductivity             | 1O0W0NU3ZPF1J  |
-	| programming              | 2CCU7K0PHVBZ6  |
-	| Psycology                | 22JADHUMCHCOZ  |
-	| Training                 | MT9A2WI1FL61	|
-	| Web and UI               | 10MTFE33315HU  |
-	| Wish List                | GKBVZ2B8F57P	|
+	| wishlistName             | wishlistPageId | bookCount |
+	| Business                 | 13WMOM3XTAK5G  | 47        |
+	| Drawing                  | 2G6OFE9P47AKA  | 16        |
+	| Electronics              | 1BSEQ7U2E6RBE  | 4         |
+	| Engeneering and business | 2OPMME7SI9MPV  | 36        |
+	| Fiction                  | 39ACCHDMKVKJ1  | 52        |
+	| Home and stuff           | 32BRN6BOWYVID  | 11        |
+	| Methodologies            | 20E6BOWWE0J4T  | 35        |
+	| New Wish List            | 2P8W7HDF4M6NR  | 0         |
+	| Patterns                 | 34GLJJOVRPDZU  | 16        |
+	| Photography              | 2WYRZAFDXJ9C2  | 7         |
+	| PRoductivity             | 1O0W0NU3ZPF1J  | 0         |
+	| programming              | 2CCU7K0PHVBZ6  | 34        |
+	| Psycology                | 22JADHUMCHCOZ  | 3         |
+	| Training                 | MT9A2WI1FL61   | 3         |
+	| Web and UI               | 10MTFE33315HU  | 29        |
+	| Wish List                | GKBVZ2B8F57P   | 0         |
 
 Scenario: Get list of books in a specific wishlist
 	Given I have configured my scraper with:

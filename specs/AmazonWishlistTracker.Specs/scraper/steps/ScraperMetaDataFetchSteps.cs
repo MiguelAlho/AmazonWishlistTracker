@@ -51,8 +51,12 @@ namespace AmazonWishlistTracker.Specs.scraper.steps
             {
                 var expectedName = row[0];
                 var expectedId = row[1];
+                var expectedBookCount = row[2];
 
-                Assert.IsTrue(wishlists.Any(o => o.AwId.ToString() == expectedId && o.Name.ToString() == expectedName), "could not find {0},{1} in list", expectedName, expectedId);
+                Assert.IsTrue(wishlists.Any(o => o.AwId.ToString() == expectedId 
+                                              && o.Name.ToString() == expectedName
+                                              && o.BookCount.ToString() == expectedBookCount), 
+                              "could not find {0},{1},{2} in list", expectedName, expectedId, expectedBookCount);
             }
         }
 

@@ -16,12 +16,14 @@ namespace WishlistScreenScraper.UnitTests.Dto
         {
             var name = "Business";
             var amazonId = "13WMOM3XTAK5G";
+            var count = 12;
 
-            var instance = new Wishlist(name, amazonId);
+            var instance = new Wishlist(name, amazonId, count);
 
             Assert.IsNotNull(instance);
             Assert.AreEqual(name, instance.Name);
             Assert.AreEqual(amazonId, instance.AwId);
+            Assert.AreEqual(count, instance.BookCount);
         }
     }
 }

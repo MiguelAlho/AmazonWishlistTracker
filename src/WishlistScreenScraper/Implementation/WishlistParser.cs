@@ -15,6 +15,11 @@ namespace AmazonWishlistTracker.WishlistScreenScraper.Implementation
         private IWishlistParsingDefinitions definitions;
         private IWebClient webClient;
 
+        /// <summary>
+        /// Create a wishlist parser
+        /// </summary>
+        /// <param name="definitions">parsing definitions</param>
+        /// <param name="webClient">web acess library</param>
         public WishlistParser(IWishlistParsingDefinitions definitions, IWebClient webClient)
         {
             if(definitions == null)
@@ -26,28 +31,38 @@ namespace AmazonWishlistTracker.WishlistScreenScraper.Implementation
             this.webClient = webClient;
         }
 
-
+        /// <summary>
+        /// Get the list of wishlists for the specified user
+        /// </summary>
+        /// <param name="userEmail"></param>
+        /// <returns></returns>
         public IList<Wishlist> GetWishlistsForUser(string userEmail)
         {
+            var uri = definitions.WishlistCollectionUri;
+            var html = GetHtmlFromUri(uri);
+            return GetWishlistsFromhtml(html);
+        }
+
+        private IList<Wishlist> GetWishlistsFromhtml(string html)
+        {
             IList<Wishlist> wishlists = new List<Wishlist>();
-
-            var uri = new Uri(@"http://www.amazon.co.uk/gp/aw/ls"); //definitions.BaseUrl, definitions.WishlistRelativeUrlPath);
-            byte[] byteData = webClient.DownloadData(uri);
-
-            string html = Encoding.UTF8.GetString(byteData);
-
-            //parse
-            //raw regex:
-            //<a href="/gp/aw/ls/ref=aw_ls\?lid=(?'amazonId'[A-Z0-9]*)">(?:<b><font color='#[A-F0-9]{6}'>)?(?'wishlistname'[\w\s]*)(?:</font></b>)?</a>
-            Regex regexObj = new Regex(@"<a href=""/gp/aw/ls/ref=aw_ls\?lid=(?'amazonId'[A-Z0-9]*)"">(?:<b><font color='#[A-F0-9]{6}'>)?(?'wishlistname'[\w\s]*)(?:</font></b>)?</a>");
+            
+            Regex regexObj = definitions.WishlistCollectionRegex;
             Match matchResult = regexObj.Match(html);
             while (matchResult.Success)
             {
-                wishlists.Add(new Wishlist(matchResult.Groups["wishlistname"].Value, matchResult.Groups["amazonId"].Value));
+                wishlists.Add(definitions.WishlistMatchMapperFunc(matchResult));
                 matchResult = matchResult.NextMatch();
             }
 
             return wishlists;
+        }
+
+        private string GetHtmlFromUri(Uri uri)
+        {
+            byte[] byteData = webClient.DownloadData(uri);
+            string html = Encoding.UTF8.GetString(byteData);
+            return html;
         }
     }
 }

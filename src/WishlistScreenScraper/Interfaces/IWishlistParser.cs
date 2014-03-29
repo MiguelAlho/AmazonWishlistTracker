@@ -6,5 +6,6 @@ namespace AmazonWishlistTracker.WishlistScreenScraper.Interfaces
     public interface IWishlistParser
     {
         IList<Wishlist> GetWishlistsForUser(string userEmail);
+      
     }
 }

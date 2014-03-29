@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dto\WishlistTests.cs" />
+    <Compile Include="Implementations\Definitions\AmazonUKParsingDefinitionsTests.cs" />
     <Compile Include="Implementations\WishlistParserTests.cs" />
     <Compile Include="Implementations\WishlistParsingDefinitionsFactoryTests.cs" />
     <Compile Include="Implementations\WishlistScraperConfigurationTests.cs" />

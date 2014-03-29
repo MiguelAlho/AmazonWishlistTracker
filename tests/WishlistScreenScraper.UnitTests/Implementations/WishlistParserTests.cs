@@ -7,6 +7,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using AmazonWishlistTracker.WishlistScreenScraper.Implementation;
+using AmazonWishlistTracker.WishlistScreenScraper.Implementation.Definitions;
 using AmazonWishlistTracker.WishlistScreenScraper.Interfaces;
 using Microsoft.Win32;
 using NSubstitute.Core.Arguments;
@@ -57,7 +58,8 @@ namespace WishlistScreenScraper.UnitTests.Implementations
         [Test]
         public void CanGetAListOfWishLists()
         {
-            IWishlistParsingDefinitions definitions = Substitute.For<IWishlistParsingDefinitions>();
+            IWishlistParsingDefinitions definitions = new AmazonUKParsingDefinitions();
+
             var webClientMock = WebClientMockForWishList();
 
             IWishlistParser parser = new WishlistParser(definitions, webClientMock);

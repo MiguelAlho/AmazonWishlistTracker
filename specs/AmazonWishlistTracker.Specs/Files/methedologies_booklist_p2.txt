@@ -1,0 +1,968 @@
+﻿
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+        
+    
+
+
+ 
+
+
+ 
+ 
+
+
+
+
+<html>
+ <head>
+<script type="text/javascript">var ue_t0=ue_t0||+new Date();</script>
+<script type='text/javascript'>
+var ue_id='080DY4YVTT34VJ36QBN0',
+ue_csm = window,
+ue_err_chan = 'jserr',
+ue = {};
+ue_csm.ue_hob=ue_csm.ue_hob||+new Date();(function(c){var a=c.ue,b=(Date.now||function(){return +new Date()});a.lr=[];a.log=function(f,e,d){if(a.lr.length==500){return}a.lr.push(["l",f,e,d,a.d(),c.ue_id])};a.log.isStub=1;a.d=function(d){return b()-(d?0:c.ue_t0)}})(ue_csm);ue_csm.ue_hoe=+new Date();
+ue_csm.ue_hob=ue_csm.ue_hob||+new Date();(function(f,a){var b="FATAL",c={ec:0,ecf:0,pec:0,ts:0,erl:[],ter:[],mxe:50,startTimer:function(){c.ts++;setInterval(function(){f.ue&&(c.pec<c.ec)&&f.uex("at");c.pec=c.ec},10000)}};function e(i,h){if(c.ec>c.mxe||!i){return}c.ec++;c.ter.push(i);h=h||{};var g=i.logLevel||h.logLevel;if(!g||(g==b)){c.ecf++}h.pageURL=""+(a.location?a.location.href:"");h.logLevel=g;h.attribution=i.attribution||h.attribution;c.erl.push({ex:i,info:h})}function d(l,k,g,i,h){var j={m:l,f:k,l:g,c:""+i,err:h,fromOnError:1,args:arguments};f.ueLogError(j);return false}d.skipTrace=1;e.skipTrace=1;f.ueLogError=e;f.ue_err=c;a.onerror=d})(ue_csm,window);ue_csm.ue_hoe=+new Date();
+
+
+var ue_url='/gp/aw/ls/ref=aw_ls_2/uedata/unsticky/276-1920306-7243655/WishlistAW/ntpoffrw',
+ue_sid='276-1920306-7243655',
+ue_mid='A1F83G8C2ARO7P',
+ue_sn='www.amazon.co.uk',
+ue_furl='fls-eu.amazon.co.uk',
+ue_navtiming=1,
+ue_log_idx=0,
+ue_log_f=0,
+ue_fcsn=1,
+ue_isrw=true,
+ue_fpf='//fls-eu.amazon.co.uk/1/batch/1/OP/A1F83G8C2ARO7P:276-1920306-7243655:080DY4YVTT34VJ36QBN0$uedata=s:',
+ue_lnb=0,
+ue_lwl=0,
+ue_svi=0,
+ue_ulimg=0;
+if (!window.ue_csm) {var ue_csm = window;}
+ue_csm.ue_hob=ue_csm.ue_hob||+new Date;function ue_viz(){(function(d,j,g){var i=0,b,l,e,a,c=["","moz","ms","o","webkit"],k=0,f=20,h="addEventListener";while((b=c.pop())&&!k){l=(b?b+"H":"h")+"idden";if(k=typeof j[l]=="boolean"){e=b+"visibilitychange";a=b+"VisibilityState"}}function m(q){if((d.ue.viz.length<f)){var p=q.type,n=q.originalEvent;if(!(/^focus./.test(p)&&n&&(n.toElement||n.fromElement||n.relatedTarget))){var r=j[a]||(p=="blur"||p=="focusout"?"hidden":"visible"),o=+new Date-d.ue.t0;d.ue.viz.push(r+":"+o);if(r=="visible"){if(ue.iel&&(ue.iel.length>0)&&r=="visible"&&!i){uex("at")}i=1}}}}m({});if(k){j[h](e,m,0)}})(ue_csm,document,window)}ue_csm.ue_hoe=+new Date;
+ue_csm.ue_hob=ue_csm.ue_hob||+new Date();(function(h,n){h.ueinit=(h.ueinit||0)+1;var c={t0:n.aPageStart||h.ue_t0,id:h.ue_id,url:h.ue_url,rid:h.ue_id,a:"",b:"",h:{},r:{ld:0,oe:0,ul:0},s:1,t:{},sc:{},iel:[],ielf:[],fc_idx:{},viz:[],v:33,d:h.ue&&h.ue.d,log:h.ue&&h.ue.log,lr:h.ue&&h.ue.lr,ulh:[]},l="beforeunload",d="undefined",g;h.ue=c;function i(o){return h.ue_fpf+encodeURIComponent(o)+":"+(+new Date()-h.ue_t0)}h.ue.tagC=function(){var o=[];return function(p){p&&o.push(p);return o.slice(0)}};h.ue.tag=h.ue.tagC();h.ue.ifr=((n.top!==n.self)||(n.frameElement))?1:0;function e(p,s,v,r){var u=r||(+new Date()),q,o;h.ue_log_f&&h.ue.log&&h.ue.log({f:"uet",en:p,s:s,so:v,to:r},"csm",r?{t:r-h.ue.t0}:{});if(s||(typeof v==d)){if(p){q=s?f("t",s)||f("t",s,{}):h.ue.t;q[p]=u;for(o in v){f(o,s,v[o])}}return u}}function f(p,q,r){var s,o;if(p){s=o=h.ue;if(q&&q!=s.id){o=s.sc[q];if(!o){o={};r?(s.sc[q]=o):o}}s=r?(o[p]=r):o[p]}return s}function k(s,t,r,p,o){var q="on"+r,u=t[q];if(typeof(u)=="function"){if(s){h.ue.h[s]=u}}else{u=function(){}}t[q]=o?function(v){p(v);u(v)}:function(v){u(v);p(v)};t[q].isUeh=1}function b(y,s,x){function q(W,U){var S=[W],N=0,T={},L,M;if(U){S.push("m=1");T[U]=1}else{T=h.ue.sc}for(M in T){var O=f("wb",M),R=f("t",M)||{},Q=f("t0",M)||h.ue.t0,V,P;if(U||O==2){V=O?N++:"";S.push("sc"+V+"="+M);for(P in R){if(P.length<=3&&R[P]){S.push(P+V+"="+(R[P]-Q))}}S.push("t"+V+"="+R[y]);if(f("ctb",M)||f("wb",M)){L=1}}}if(!t&&L){S.push("ctb=1")}return S.join("&")}function B(L,O,S,N){if(!L){return}var P=new Image(),U=!N||!h.ue.log||!(n.amznJQ||n.P)||(n.amznJQ&&n.amznJQ.Ok),M=h.ue_err,R,Q,T;function V(){if(h.ue.b){var W=h.ue.b;h.ue.b="";B(W,O,S,1)}}if(U){h.ue.iel.push(P);P.src=L}if(h.ue.log){if(h.ue.log.isStub&&h.ue_fpf){P=new Image();R=i(L);h.ue.iel.push(P);P.src=R}else{Q=h.ue_ulimg&&(h.ue_ulimg.met==1)&&(O=="ul");T=(!N&&((h.ue_svi&&O=="ld")||Q))?1:0;h.ue.log(L,"uedata",h.ue_svi?{n:1,img:T}:{n:1});h.ue.ielf.push(L)}}if(M&&!M.ts){M.startTimer()}V()}function J(L){if(!ue.collected){var N=L.timing,M=L.navigation;if(N){h.ue.t.na_=N.navigationStart;h.ue.t.ul_=N.unloadEventStart;h.ue.t._ul=N.unloadEventEnd;h.ue.t.rd_=N.redirectStart;h.ue.t._rd=N.redirectEnd;h.ue.t.fe_=N.fetchStart;h.ue.t.lk_=N.domainLookupStart;h.ue.t._lk=N.domainLookupEnd;h.ue.t.co_=N.connectStart;h.ue.t._co=N.connectEnd;h.ue.t.sc_=N.secureConnectionStart;h.ue.t.rq_=N.requestStart;h.ue.t.rs_=N.responseStart;h.ue.t._rs=N.responseEnd;h.ue.t.dl_=N.domLoading;h.ue.t.di_=N.domInteractive;h.ue.t.de_=N.domContentLoadedEventStart;h.ue.t._de=N.domContentLoadedEventEnd;h.ue.t._dc=N.domComplete;h.ue.t.ld_=N.loadEventStart;h.ue.t._ld=N.loadEventEnd}if(M){h.ue.t.ty=M.type+h.ue.t0;h.ue.t.rc=M.redirectCount+h.ue.t0;h.ue.tag&&h.ue.tag((M.redirectCount?"":"non")+"redirect")}h.ue.collected=1}}if(!s&&(typeof x!=d)){return}for(var o in x){f(o,s,x[o])}e("pc",s,x);var D=f("id",s)||h.ue.id,v=h.ue.url+"?"+y+"&v="+h.ue.v+"&id="+D,t=f("ctb",s)||f("wb",s),G=n.performance||n.webkitPerformance,E=h.ue.bfini,w=G&&G.navigation&&G.navigation.type==2,u=s&&(s!=D)&&f("ctb",s),p,H;if(t){v+="&ctb="+t}if(h.ueinit>1){v+="&ic="+h.ueinit}if(!u){if(E&&E>1){v+="&bft="+(E-1)+"&bfform=1"}else{if(w){v+="&bft=1"}}if(w){v+="&bfnt=1"}}if(h.ue._fi&&y=="at"&&(!s||s==D)){v+=h.ue._fi()}if((y=="ld"||y=="ul")&&(!s||s==D)){if(y=="ld"){if(n.onbeforeunload&&n.onbeforeunload.isUeh){n.onbeforeunload=null}if(h.ue_ulimg&&h.ue_ulimg.detach==1){for(H=0;H<ue.ulh.length;H++){m(h.ue_ulimg.han,ue.ulh[H])}}var I=document.ue_backdetect;if(I&&I.ue_back){I.ue_back.value++}if(h._uess){p=h._uess()}h.ue.isl=1}if(h.ue_navtiming&&G&&G.timing){f("ctb",D,"1");if(h.ue_navtiming==1){e("tc",g,g,G.timing.navigationStart)}}if(G){J(G)}h.ue.t.hob=h.ue_hob;h.ue.t.hoe=h.ue_hoe;if(h.ue.ifr){v+="&ifr=1"}}e(y,s,x);var C=(y=="ld"&&s&&f("wb",s)),F=1,A,r,K;if(C){f("wb",s,2)}for(A in h.ue.sc){if(f("wb",A)==1){F=0;break}}if(C){if(!h.ue.s){v=q(v,null)}else{return}}else{K=q(v,null);if(K!=v){h.ue.b=K}if(p){v+=p}v=q(v,s||h.ue.id)}if(h.ue.b||C){for(A in h.ue.sc){if(f("wb",A)==2){delete h.ue.sc[A]}}}var z=0;if(ue._rt){v+="&rt="+ue._rt()}if(!C){h.ue.s=0;r=h.ue_err;if(r&&r.ec>0&&(r.pec<r.ec)){r.pec=r.ec;v+="&ec="+r.ec+"&ecf="+r.ecf}z=f("ctb",s);f("t",s,{})}if(!n.amznJQ&&h.ue.tag){h.ue.tag("noAmznJQ")}if(h.ue.log&&h.ue.log.isStub&&h.ue.tag&&y=="ul"){h.ue.tag("noForester")}if(v&&h.ue.tag&&h.ue.tag().length>0){v+="&csmtags="+h.ue.tag().join("|");h.ue.tag=h.ue.tagC()}if(v&&h.ue.viz&&h.ue.viz.length>0){v+="&viz="+h.ue.viz.join("|");h.ue.viz=[]}if(v&&(typeof h.ue_pty!=d)){v+="&pty="+h.ue_pty+"&spty="+h.ue_spty+"&pti="+h.ue_pti}if(h.ue._ui&&(!s||s==D)){v+=h.ue._ui()}h.ue.a=v;B(v,y,z,C)}function a(o,p,q){q=q||n;if(q.addEventListener){q.addEventListener(o,p,false)}else{if(q.attachEvent){q.attachEvent("on"+o,p)}}}ue.attach=a;function m(o,p,q){q=q||n;if(q.removeEventListener){q.removeEventListener(o,p,false)}else{if(q.detachEvent){q.detachEvent("on"+o,p)}}}ue.detach=m;function j(){var s=h.ue.r,o,t;function q(r){return function(){if(!s[r]){s[r]=1;b(r)}}}h.onLd=q("ld");h.onLdEnd=q("ld");h.onUl=q("ul");o={stop:q("os")};if(!n.chrome){o[l]=h.onUl}else{if(h.ue_ulimg){function p(){if(h.ue_ulimg.met!=2){h.onUl()}}a(h.ue_ulimg.han,p);if(h.ue_ulimg.detach==1){ue.ulh.push(p)}}}for(t in o){k(0,n,t,o[t])}h.ue_viz&&ue_viz();a("load",h.onLd);e("ue")}ue.reset=function(p,o){if(p){h.ue_cel&&h.ue_cel.reset();h.ue.t0=+new Date();h.ue.rid=p;h.ue.id=p;h.ue.fc_idx={};h.ue.viz=[]}};h.uei=j;h.ueh=k;h.ues=f;h.uet=e;h.uex=b;j()})(ue_csm,window);ue_csm.ue_hoe=+new Date();
+
+
+</script>
+<script type='text/javascript'>
+ue_csm.ue_hob=ue_csm.ue_hob||+new Date;(function(a){a.ue.cv={};a.ue.cv.scopes={};a.ue.count=function(d,b,c){var f={},e=a.ue.cv;f.counter=d;f.value=b;if(c&&c.scope){e=a.ue.cv.scopes[c.scope]=a.ue.cv.scopes[c.scope]||{};f.scope=c.scope}if(b==undefined){return e[d]}e[d]=b;a.ue.log&&a.ue.log(f,"csmcount")}})(ue_csm);ue_csm.ue_hoe=+new Date();
+</script>
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+<title>Amazon.co.uk</title>
+
+
+<meta content="Amazon.co.uk" name="keywords" /><meta content="Amazon.co.uk" name="description" />
+
+
+
+
+
+
+
+
+
+
+
+
+ <script type="text/javascript">
+(function(f,c){var b=[];function d(g){b.push(g)}function a(h){if(!h){return}var g=f.head||f.getElementsByTagName("head")[0]||f.documentElement,i=f.createElement("script");i.async="async";i.src=h;g.insertBefore(i,g.firstChild)}function e(){ue.uels=a;for(var g=0;g<b.length;g++){a(b[g])}ue.deffered=1}if(c.ue){ue.uels=d;if(c.ue.attach){c.ue.attach("load",e)}}})(document,window);
+
+    if (window.P && P.load && P.load.js) {
+    
+P.when('ready').execute(function() {
+  P.load.js('http://z-ecx.images-amazon.com/images/G/01/AUIClients/CSMJavaScriptAmazonUIBase-f02cb74f5cf0f772be4a82b7750c5a464732bc55.min._V1_.js', ['CSMJavaScriptAmazonUIBase']);
+});
+
+}
+ else if (window.ue && window.ue.uels) {
+    ue.uels("http://z-ecx.images-amazon.com/images/G/01/browser-scripts/csm-base/csm-base-min-1161285209._V1_.js");
+}
+ else if (window.amznJQ) {
+    amznJQ.addLogical('csm-base', ["http://z-ecx.images-amazon.com/images/G/01/browser-scripts/csm-base/csm-base-min-1161285209._V1_.js"]);
+    amznJQ.available('csm-base', function() {});
+}
+
+
+(function(c){var a="[CSM] Alert invocation detected with argument: ",e="WARN",b=c.alert;function d(){if(c.ueLogError){c.ueLogError({message:a+arguments[0],logLevel:e})}Function.prototype.apply.apply(b,[c,arguments||[]])}window.alert=d})(window);
+(function(c,g,k){var n=c.ue,b=c.uex,h=0,j=0,l,m,e,f,a={click:1,mousemove:2,scroll:3,keydown:4};if(!n||!b){return}function p(r){if(j){return}j=a[r.type];if(typeof r.clientX==="undefined"){e=r.pageX;f=r.pageY}else{e=r.clientX;f=r.clientY}if(j==2&&(!l||(l==e&&m==f))){l=e;m=f;j=0;return}for(var q in a){if(a.hasOwnProperty(q)){n.detach(q,p,k)}}if(n.isl){g.setTimeout(function(){b("at",n.id)},0)}}function o(){var i="";if(!h&&j){h=1;i+="&ui="+j}return i}for(var d in a){if(a.hasOwnProperty(d)){n.attach(d,p,k)}}n._ui=o})(ue_csm,window,document);
+
+</script>
+</head>
+ <body>
+ <script type="text/javascript">if(typeof uet === 'function'){(function(t){var w = window;w.awTags = w.awTags || {};w.awTags[t] = w.awTags[t] || (ue.tag(t) && 1)})('pc');uet('bb');};</script>
+ <script type="text/javascript">if(typeof uet === 'function'){(function(t){var w = window;w.awTags = w.awTags || {};w.awTags[t] = w.awTags[t] || (ue.tag(t) && 1)})('pc');uet('ns');};</script>
+ 
+
+
+
+
+
+
+
+
+
+<a name="top"></a>
+ <center>Amazon.co.uk</center>
+<hr color="#cccccc" width="100%" size="2" noshade="noshade" />
+ <script type="text/javascript">if(typeof uet === 'function'){(function(t){var w = window;w.awTags = w.awTags || {};w.awTags[t] = w.awTags[t] || (ue.tag(t) && 1)})('pc');uet('ne');};</script>
+ 
+ 
+
+
+
+<b>Methodologies</b>
+<br />
+
+ 
+ 
+ 
+
+
+<a href="#w">See your other Wish Lists</a>
+<br />
+
+ 
+
+
+
+
+ <form action="/gp/aw/ls/ref=aw_ls"">
+ 
+ <input type="hidden" name="lid" value="20E6BOWWE0J4T" /><input type="hidden" name="p" value="2" /><input type="hidden" name="ty" value="wishlist" />
+ <select name="s">
+ <option value="da" >Date Added</option><option value="lu" >Last Updated</option><option value="pa" >Price (low to high)</option><option value="pd" >Price (high to low)</option><option value="t" >Title</option>
+ </select>
+ <input type="submit" value="Sort">
+ </form>
+
+ 
+
+
+<a href="/gp/aw/ls/ref=aw_ls?f=1&lid=20E6BOWWE0J4T&s=date-added&ty=wishlist">Show purchased items</a>
+<br />
+<hr color="#cccccc" width="100%" size="1" noshade="noshade" />
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+<form method="post" action="/gp/aw/ls/ref=aw_ls_cart">
+ <input type="hidden" name="maxItems" value="15" /><input type="hidden" name="o" value="addToCart" /><input type="hidden" name="si" value="276-1920306-7243655" />
+
+ <a href="/gp/aw/d/1430235330/ref=aw_ls_2_1?colid=20E6BOWWE0J4T&coliid=I20WIM3Q2REQPN">Pro Agile .NET Development with SCRUM (Expert's Voice in .NET) (Paperback)</a>
+ <br />
+ £33.48
+ <br />
+
+
+ In stock
+ <br />
+
+ <a href="/gp/aw/ol/1430235330/ref=aw_ls_ol?colid=20E6BOWWE0J4T&coliid=I20WIM3Q2REQPN&si=276-1920306-7243655">New &amp; used</a> from £30.58
+ <br />
+
+ <input type="hidden" name="colid.1" value="20E6BOWWE0J4T" /><input type="hidden" name="coliid.1" value="I20WIM3Q2REQPN" /><input type="hidden" name="oid.1" value="jQ1fe26Jvi4X3vEmmlsM18ygXhlPtre5SD77KxwMe%2Bk3rVdAb48cBHXTRi6ZFm0OA2BGSL9B8dW0vOMYt7UQdh08tGCeqaRS" />
+ <input type="submit"
+ name="cartSubmit.1"
+ value="Add to Basket" />&nbsp;
+
+
+ <a href="/gp/aw/ls?appAction=delete&appActionToken=71cbc2db7d11e884419b3b6f43c4e6c42ce0ff6121a8bfb4fa33cfd0e4e2b7db&csrfRnd=0.427942224836666&csrfTs=1396095022&iid=I20WIM3Q2REQPN&lid=20E6BOWWE0J4T&p=2&ty=wishlist">Delete</a>
+ <hr width="100%" size="1" noshade="noshade" />
+ <a href="/gp/aw/d/0131495054/ref=aw_ls_2_2?colid=20E6BOWWE0J4T&coliid=I1AUJX5QOLK23D">xUnit Test Patterns: Refactoring Test Code (Addison Wesley Signature) (Hardcover)</a>
+ <br />
+ £35.24
+ <br />
+
+
+ Only 3 left in stock (more on the way).
+ <br />
+
+ <a href="/gp/aw/ol/0131495054/ref=aw_ls_ol?colid=20E6BOWWE0J4T&coliid=I1AUJX5QOLK23D&si=276-1920306-7243655">New &amp; used</a> from £27.19
+ <br />
+
+ <input type="hidden" name="colid.2" value="20E6BOWWE0J4T" /><input type="hidden" name="coliid.2" value="I1AUJX5QOLK23D" /><input type="hidden" name="oid.2" value="Hn9HhtZHTQCzF9kHn4KwAJFwuyGqhssa8KozlqPvImRjQH57u5soJSe7m%2BJbHXSfITqm72Lx7Gx%2B3FcZr1ljyNQ%2Bc7f7W9jG" />
+ <input type="submit"
+ name="cartSubmit.2"
+ value="Add to Basket" />&nbsp;
+
+
+ <a href="/gp/aw/ls?appAction=delete&appActionToken=f9386eb35deb681fab5c360c7e479a310a0e6d076c89618acf3c0081e1bc0901&csrfRnd=0.283755316388913&csrfTs=1396095022&iid=I1AUJX5QOLK23D&lid=20E6BOWWE0J4T&p=2&ty=wishlist">Delete</a>
+ <hr width="100%" size="1" noshade="noshade" />
+ <a href="/gp/aw/d/1934356859/ref=aw_ls_2_3?colid=20E6BOWWE0J4T&coliid=I2IJBGK4RTYUEA">Lean from the Trenches: Managing Large-Scale Projects with Kanban (Paperback)</a>
+ <br />
+ £22.99
+ <br />
+
+
+ Only 10 left in stock (more on the way).
+ <br />
+
+ <a href="/gp/aw/ol/1934356859/ref=aw_ls_ol?colid=20E6BOWWE0J4T&coliid=I2IJBGK4RTYUEA&si=276-1920306-7243655">New &amp; used</a> from £10.59
+ <br />
+
+ <input type="hidden" name="colid.3" value="20E6BOWWE0J4T" /><input type="hidden" name="coliid.3" value="I2IJBGK4RTYUEA" /><input type="hidden" name="oid.3" value="%2BE%2BTJn32BUWtzymsdzCIdO2Q4k2GFN%2BfJtKdzIBamVhOZHK0M61HQwx20joC%2FirREwmP5B0vARgPt%2BGnsDvclAvN725McFKz" />
+ <input type="submit"
+ name="cartSubmit.3"
+ value="Add to Basket" />&nbsp;
+
+
+ <a href="/gp/aw/ls?appAction=delete&appActionToken=22e38bfb14b3933112eb86f81cfb95082cd62eb2af3113d9084b77ce583028a7&csrfRnd=0.6843667139097&csrfTs=1396095022&iid=I2IJBGK4RTYUEA&lid=20E6BOWWE0J4T&p=2&ty=wishlist">Delete</a>
+ <hr width="100%" size="1" noshade="noshade" />
+ <a href="/gp/aw/d/0321754069/ref=aw_ls_2_4?colid=20E6BOWWE0J4T&coliid=I2XRE7QJHDHJ07">Experiences of Test Automation: Case Studies of Software Test Automation (Paperback)</a>
+ <br />
+ £23.99
+ <br />
+
+
+ Only 1 left in stock (more on the way).
+ <br />
+
+ <a href="/gp/aw/ol/0321754069/ref=aw_ls_ol?colid=20E6BOWWE0J4T&coliid=I2XRE7QJHDHJ07&si=276-1920306-7243655">New &amp; used</a> from £17.10
+ <br />
+
+ <input type="hidden" name="colid.4" value="20E6BOWWE0J4T" /><input type="hidden" name="coliid.4" value="I2XRE7QJHDHJ07" /><input type="hidden" name="oid.4" value="fwNZhtdsR8XMFXS8pihDn9u0KI%2BIZwW2iriF9XfiRFNOsPEB0zZOUgrbupEa9YUNPEDPhVGTm8fDgITs59c3gp8hPCxQR6pc" />
+ <input type="submit"
+ name="cartSubmit.4"
+ value="Add to Basket" />&nbsp;
+
+
+ <a href="/gp/aw/ls?appAction=delete&appActionToken=c7833ee59302e976fc6b08807d8eeff02064081ea3418e45df71a6bbfe0ea2ec&csrfRnd=0.226114248392861&csrfTs=1396095022&iid=I2XRE7QJHDHJ07&lid=20E6BOWWE0J4T&p=2&ty=wishlist">Delete</a>
+ <hr width="100%" size="1" noshade="noshade" />
+ <a href="/gp/aw/d/0321784154/ref=aw_ls_2_5?colid=20E6BOWWE0J4T&coliid=I18YBWW8SOHOA5">ATDD by Example: A Practical Guide to Acceptance Test-driven Development (Addison-Wesley Signature) (Paperback)</a>
+ <br />
+ £17.91
+ <br />
+
+
+ Only 3 left in stock (more on the way).
+ <br />
+
+ <a href="/gp/aw/ol/0321784154/ref=aw_ls_ol?colid=20E6BOWWE0J4T&coliid=I18YBWW8SOHOA5&si=276-1920306-7243655">New &amp; used</a> from £12.36
+ <br />
+
+ <input type="hidden" name="colid.5" value="20E6BOWWE0J4T" /><input type="hidden" name="coliid.5" value="I18YBWW8SOHOA5" /><input type="hidden" name="oid.5" value="9azts7NcPA7lNRy07ejpmjwwsaBdvGk7PbRG4F6gf%2BW4GHX2fsJ%2F8UpVW0fxddF%2FV9hno7QnAeD%2FDo%2BZxouT1UxNBobd2YVp" />
+ <input type="submit"
+ name="cartSubmit.5"
+ value="Add to Basket" />&nbsp;
+
+
+ <a href="/gp/aw/ls?appAction=delete&appActionToken=351abe78698a0caedb4eb6f120941a9dbd705fce3949762eb15d885033e1d183&csrfRnd=0.490658572047504&csrfTs=1396095022&iid=I18YBWW8SOHOA5&lid=20E6BOWWE0J4T&p=2&ty=wishlist">Delete</a>
+ <hr width="100%" size="1" noshade="noshade" />
+ <a href="/gp/aw/d/1934356158/ref=aw_ls_2_6?colid=20E6BOWWE0J4T&coliid=I18CZWOZXZ0ANV">Pragmatic Version Control Using Git: 1 (Pragmatic Starter Kit) (Paperback)</a>
+ <br />
+ £26.99
+ <br />
+
+
+ Only 1 left in stock (more on the way).
+ <br />
+
+ <a href="/gp/aw/ol/1934356158/ref=aw_ls_ol?colid=20E6BOWWE0J4T&coliid=I18CZWOZXZ0ANV&si=276-1920306-7243655">New &amp; used</a> from £6.52
+ <br />
+
+ <input type="hidden" name="colid.6" value="20E6BOWWE0J4T" /><input type="hidden" name="coliid.6" value="I18CZWOZXZ0ANV" /><input type="hidden" name="oid.6" value="BuWPFd5dvUNG4WhFa7CFcnF6bCG9nInbZdlwkRjtTH59sz1V%2BcQeGVU7hdzIBdBIVNqKTYvSrm%2BeoApoyECRZ3AEBhaer0UI" />
+ <input type="submit"
+ name="cartSubmit.6"
+ value="Add to Basket" />&nbsp;
+
+
+ <a href="/gp/aw/ls?appAction=delete&appActionToken=e27195815023ce6b45fa83bed465e9a05c64099f730b528414fbeda9ce4095b3&csrfRnd=0.230242715786297&csrfTs=1396095022&iid=I18CZWOZXZ0ANV&lid=20E6BOWWE0J4T&p=2&ty=wishlist">Delete</a>
+ <hr width="100%" size="1" noshade="noshade" />
+ <a href="/gp/aw/d/1449316387/ref=aw_ls_2_7?colid=20E6BOWWE0J4T&coliid=I29RLXKI2EOAW4">Version Control with Git: Powerful tools and techniques for collaborative software development (Paperback)</a>
+ <br />
+ £26.99
+ <br />
+
+
+ In stock
+ <br />
+
+ <a href="/gp/aw/ol/1449316387/ref=aw_ls_ol?colid=20E6BOWWE0J4T&coliid=I29RLXKI2EOAW4&si=276-1920306-7243655">New &amp; used</a> from £12.32
+ <br />
+
+ <input type="hidden" name="colid.7" value="20E6BOWWE0J4T" /><input type="hidden" name="coliid.7" value="I29RLXKI2EOAW4" /><input type="hidden" name="oid.7" value="YegzW%2BxIL6t4DMeZDTGvpqk2NUwGlNiFKRmlN0sUVGuEFjVBlKDuDYSK5QU0VYbRiiI%2Bhvwpmp600d6MOQ%2FPEkAC6iJP91Hb" />
+ <input type="submit"
+ name="cartSubmit.7"
+ value="Add to Basket" />&nbsp;
+
+
+ <a href="/gp/aw/ls?appAction=delete&appActionToken=5a9c35f08d7d1ce73148ae5079af256fee5cab8420a63aad3ddd962d8f75ddaf&csrfRnd=0.140605720396383&csrfTs=1396095022&iid=I29RLXKI2EOAW4&lid=20E6BOWWE0J4T&p=2&ty=wishlist">Delete</a>
+ <hr width="100%" size="1" noshade="noshade" />
+ <a href="/gp/aw/d/0321336380/ref=aw_ls_2_8?colid=20E6BOWWE0J4T&coliid=I2IZY04YNZCTIJ">Continuous Integration: Improving Software Quality and Reducing Risk (Martin Fowler Signature Books) (Paperback)</a>
+ <br />
+ £27.74
+ <br />
+
+
+ Only 2 left in stock (more on the way).
+ <br />
+
+ <a href="/gp/aw/ol/0321336380/ref=aw_ls_ol?colid=20E6BOWWE0J4T&coliid=I2IZY04YNZCTIJ&si=276-1920306-7243655">New &amp; used</a> from £18.03
+ <br />
+
+ <input type="hidden" name="colid.8" value="20E6BOWWE0J4T" /><input type="hidden" name="coliid.8" value="I2IZY04YNZCTIJ" /><input type="hidden" name="oid.8" value="koWo3tg7OdTg7nKSYPESgQYBBFPyiPRYsXiMruGCGM0t9YdE4nnIbOFWGTlk2U%2Bts5Hl%2FUDLdHWuWVissw%2BUH7FjBYX4Rf4A" />
+ <input type="submit"
+ name="cartSubmit.8"
+ value="Add to Basket" />&nbsp;
+
+
+ <a href="/gp/aw/ls?appAction=delete&appActionToken=22b5278f9722f53b2e8b3d047c505375f29235f73ba6a953bc336f813a6fa907&csrfRnd=0.975372181306099&csrfTs=1396095022&iid=I2IZY04YNZCTIJ&lid=20E6BOWWE0J4T&p=2&ty=wishlist">Delete</a>
+ <hr width="100%" size="1" noshade="noshade" />
+ <a href="/gp/aw/d/0137081073/ref=aw_ls_2_9?colid=20E6BOWWE0J4T&coliid=I2DEGUI9OU09YI">The Clean Coder: A Code of Conduct for Professional Programmers (Robert C. Martin) (Paperback)</a>
+ <br />
+ £21.74
+ <br />
+
+
+ In stock
+ <br />
+
+ <a href="/gp/aw/ol/0137081073/ref=aw_ls_ol?colid=20E6BOWWE0J4T&coliid=I2DEGUI9OU09YI&si=276-1920306-7243655">New &amp; used</a> from £12.90
+ <br />
+
+ <input type="hidden" name="colid.9" value="20E6BOWWE0J4T" /><input type="hidden" name="coliid.9" value="I2DEGUI9OU09YI" /><input type="hidden" name="oid.9" value="nb0evhTM0T43udWKskTLogYppJKO6okrh81%2BLkMQA%2FDq5LOjYRczxoegOT5K%2F75Ut4tW0r8q6HbddzIS9pK8fhirkaYBJuYn" />
+ <input type="submit"
+ name="cartSubmit.9"
+ value="Add to Basket" />&nbsp;
+
+
+ <a href="/gp/aw/ls?appAction=delete&appActionToken=1bb02d2a5fd14fbffcd33181008d6ec3f484b76e55de82fc664285f85b04bb7f&csrfRnd=0.94799365320014&csrfTs=1396095022&iid=I2DEGUI9OU09YI&lid=20E6BOWWE0J4T&p=2&ty=wishlist">Delete</a>
+ <hr width="100%" size="1" noshade="noshade" />
+ <a href="/gp/aw/d/1593274246/ref=aw_ls_2_10?colid=20E6BOWWE0J4T&coliid=IJPD3UBEUECVG">Think Like a Programmer: An Introduction to Creative Problem Solving (Paperback)</a>
+ <br />
+ £20.62
+ <br />
+
+
+ Only 9 left in stock (more on the way).
+ <br />
+
+ <a href="/gp/aw/ol/1593274246/ref=aw_ls_ol?colid=20E6BOWWE0J4T&coliid=IJPD3UBEUECVG&si=276-1920306-7243655">New &amp; used</a> from £11.25
+ <br />
+
+ <input type="hidden" name="colid.10" value="20E6BOWWE0J4T" /><input type="hidden" name="coliid.10" value="IJPD3UBEUECVG" /><input type="hidden" name="oid.10" value="zFrxYSX3HmVxr%2F8zAHMunN5BMZXWzVN5nJtmR%2BSkDMdvpuDOiW%2FhAc7eWQLbXoGJoZGGge%2BONf5O2TuZLab7LPBtvQdyRkYE" />
+ <input type="submit"
+ name="cartSubmit.10"
+ value="Add to Basket" />&nbsp;
+
+
+ <a href="/gp/aw/ls?appAction=delete&appActionToken=9659ae84a9fcdd1add138520bfd803b0ff91606216b864435689ec8300ddc58e&csrfRnd=0.367340058401986&csrfTs=1396095022&iid=IJPD3UBEUECVG&lid=20E6BOWWE0J4T&p=2&ty=wishlist">Delete</a>
+ <hr width="100%" size="1" noshade="noshade" />
+ <a href="/gp/aw/d/0596518021/ref=aw_ls_2_11?colid=20E6BOWWE0J4T&coliid=I3N5AJTH8EZK2S">Beautiful Teams: Inspiring and Cautionary Tales from Veteran Team Leaders (Paperback)</a>
+ <br />
+ £28.44
+ <br />
+
+
+ Only 1 left in stock (more on the way).
+ <br />
+
+ <a href="/gp/aw/ol/0596518021/ref=aw_ls_ol?colid=20E6BOWWE0J4T&coliid=I3N5AJTH8EZK2S&si=276-1920306-7243655">New &amp; used</a> from £8.70
+ <br />
+
+ <input type="hidden" name="colid.11" value="20E6BOWWE0J4T" /><input type="hidden" name="coliid.11" value="I3N5AJTH8EZK2S" /><input type="hidden" name="oid.11" value="HjJMFiB4xnhy9pyFjrzHgn%2Bx2sFhO70qn6D5HBwaVXBOmTE85xSNniS2pP24lRDYvMtMrsYREKPKlw9g3Ap1DTHn1ogkj15A" />
+ <input type="submit"
+ name="cartSubmit.11"
+ value="Add to Basket" />&nbsp;
+
+
+ <a href="/gp/aw/ls?appAction=delete&appActionToken=c4034e23e256767b1b43d00526536d3e79bf86bb3d89e82e8f5a6d15bed1ee03&csrfRnd=0.471243379985001&csrfTs=1396095022&iid=I3N5AJTH8EZK2S&lid=20E6BOWWE0J4T&p=2&ty=wishlist">Delete</a>
+ <hr width="100%" size="1" noshade="noshade" />
+ <a href="/gp/aw/d/059652269X/ref=aw_ls_2_12?colid=20E6BOWWE0J4T&coliid=I25F9LWDLM1TMQ">97 Things Every Software Architect Should Know (Paperback)</a>
+ <br />
+ £26.99
+ <br />
+
+
+ Only 2 left in stock (more on the way).
+ <br />
+
+ <a href="/gp/aw/ol/059652269X/ref=aw_ls_ol?colid=20E6BOWWE0J4T&coliid=I25F9LWDLM1TMQ&si=276-1920306-7243655">New &amp; used</a> from £4.32
+ <br />
+
+ <input type="hidden" name="colid.12" value="20E6BOWWE0J4T" /><input type="hidden" name="coliid.12" value="I25F9LWDLM1TMQ" /><input type="hidden" name="oid.12" value="t%2Fk3okDv0YNrGsGHj9qfHuJ2lfRDVqPKdRewTJclJvoL3hIalQPHUM8DMGOOSbsLNq5xCO7BKt3tQfF3MkRpK97c6zBB5ZGv" />
+ <input type="submit"
+ name="cartSubmit.12"
+ value="Add to Basket" />&nbsp;
+
+
+ <a href="/gp/aw/ls?appAction=delete&appActionToken=26b5083034ca4ef34c8b7ad80b48bad5be2cb7276037b3cbf1b6b182a5e7354f&csrfRnd=0.844123599200486&csrfTs=1396095022&iid=I25F9LWDLM1TMQ&lid=20E6BOWWE0J4T&p=2&ty=wishlist">Delete</a>
+ <hr width="100%" size="1" noshade="noshade" />
+ <a href="/gp/aw/d/0123694965/ref=aw_ls_2_13?colid=20E6BOWWE0J4T&coliid=I1IMMDZEC1F9GB">The Art of Game Design: A book of lenses (Paperback)</a>
+ <br />
+ £37.99
+ <br />
+
+
+ Only 6 left in stock (more on the way).
+ <br />
+
+ <a href="/gp/aw/ol/0123694965/ref=aw_ls_ol?colid=20E6BOWWE0J4T&coliid=I1IMMDZEC1F9GB&si=276-1920306-7243655">New &amp; used</a> from £27.11
+ <br />
+
+ <input type="hidden" name="colid.13" value="20E6BOWWE0J4T" /><input type="hidden" name="coliid.13" value="I1IMMDZEC1F9GB" /><input type="hidden" name="oid.13" value="IEAniPIU9T6aZvXWRPUWH3%2FOyMZTWqevZ7Y1V%2FypFCqPVNuLAezjKTdfUxL7UOJacM5wSJ3PDMUOXGO2n58o7uFVa8ejFEaq" />
+ <input type="submit"
+ name="cartSubmit.13"
+ value="Add to Basket" />&nbsp;
+
+
+ <a href="/gp/aw/ls?appAction=delete&appActionToken=3dec1993d9d30f9f7bdf5cbc855405bb116cb74d1025b09f9126f0acf35523bc&csrfRnd=0.912479985108671&csrfTs=1396095022&iid=I1IMMDZEC1F9GB&lid=20E6BOWWE0J4T&p=2&ty=wishlist">Delete</a>
+ <hr width="100%" size="1" noshade="noshade" />
+ <a href="/gp/aw/d/0132582201/ref=aw_ls_2_14?colid=20E6BOWWE0J4T&coliid=I2GGV6X97C1MEV">The Economics of Software Quality (Hardcover)</a>
+ <br />
+ £51.99
+ <br />
+
+
+ Only 2 left in stock (more on the way).
+ <br />
+
+ <a href="/gp/aw/ol/0132582201/ref=aw_ls_ol?colid=20E6BOWWE0J4T&coliid=I2GGV6X97C1MEV&si=276-1920306-7243655">New &amp; used</a> from £29.94
+ <br />
+
+ <input type="hidden" name="colid.14" value="20E6BOWWE0J4T" /><input type="hidden" name="coliid.14" value="I2GGV6X97C1MEV" /><input type="hidden" name="oid.14" value="FKI%2FyjAnvQGN9HB3XS7e2NTMKR8Q6t4eCLCvN5tUPLtUZE9bGGO4Fgdr3qKX6lhHrxbrFCVGQ%2B8YZVIrXXg3qLLQoI1rmswn" />
+ <input type="submit"
+ name="cartSubmit.14"
+ value="Add to Basket" />&nbsp;
+
+
+ <a href="/gp/aw/ls?appAction=delete&appActionToken=ea69b54b835874215a73c06a03c970fe7dd31fc91332884de6cfc8ee1eae5260&csrfRnd=0.700738720841663&csrfTs=1396095022&iid=I2GGV6X97C1MEV&lid=20E6BOWWE0J4T&p=2&ty=wishlist">Delete</a>
+ <hr width="100%" size="1" noshade="noshade" />
+ <a href="/gp/aw/d/0321579364/ref=aw_ls_2_15?colid=20E6BOWWE0J4T&coliid=IABVVBGOVX46G">Succeeding with Agile: Software Development Using Scrum (Addison-Wesley Signature) (Paperback)</a>
+ <br />
+ £23.99
+ <br />
+
+
+ In stock
+ <br />
+
+ <a href="/gp/aw/ol/0321579364/ref=aw_ls_ol?colid=20E6BOWWE0J4T&coliid=IABVVBGOVX46G&si=276-1920306-7243655">New &amp; used</a> from £16.49
+ <br />
+
+ <input type="hidden" name="colid.15" value="20E6BOWWE0J4T" /><input type="hidden" name="coliid.15" value="IABVVBGOVX46G" /><input type="hidden" name="oid.15" value="uptUOB3SY%2B7XjS%2BGqTiXRuTyOPGqremDC5p6u2%2F5jQAXvHVVNMELa%2BMkZKefyQyPCWhqzbla%2FsaBeUxMoTZegCK6ptsrQ6Su" />
+ <input type="submit"
+ name="cartSubmit.15"
+ value="Add to Basket" />&nbsp;
+
+
+ <a href="/gp/aw/ls?appAction=delete&appActionToken=d565161b7cfdda009f2cbcad3fa298fd6e5e1afe299118f8a66057d6ea87c0ee&csrfRnd=0.944020681448411&csrfTs=1396095022&iid=IABVVBGOVX46G&lid=20E6BOWWE0J4T&p=2&ty=wishlist">Delete</a>
+</form>
+
+
+ 
+ 
+
+
+
+
+
+
+
+ <a href="/gp/aw/ls/ref=aw_ls_1?lid=20E6BOWWE0J4T&p=1&reveal=unpurchased&sort=date-added&ty=wishlist">Prev</a>
+
+
+<a href="/gp/aw/ls/ref=aw_ls_1?lid=20E6BOWWE0J4T&p=1&reveal=unpurchased&sort=date-added&ty=wishlist">1</a> 2
+
+
+
+ 
+
+
+
+
+<hr width="100%" color="#808080" size="1" noshade="noshade" />
+
+<b>Your Wish Lists</b><br />
+<div id="w">
+ <a href="/gp/aw/ls/ref=aw_ls?lid=GKBVZ2B8F57P">Wish List</a>
+ <span>
+ <font color="gray">
+ &nbsp;(0)&nbsp;
+ -&nbsp;Default
+ </font>
+ </span>
+ <br />
+ <a href="/gp/aw/ls/ref=aw_ls?lid=2OPMME7SI9MPV">Engeneering and business</a>
+ <span>
+ <font color="gray">
+ &nbsp;(36)&nbsp;
+ </font>
+ </span>
+ <br />
+ <a href="/gp/aw/ls/ref=aw_ls?lid=39ACCHDMKVKJ1">Fiction</a>
+ <span>
+ <font color="gray">
+ &nbsp;(52)&nbsp;
+ </font>
+ </span>
+ <br />
+ <a href="/gp/aw/ls/ref=aw_ls?lid=10MTFE33315HU">Web and UI</a>
+ <span>
+ <font color="gray">
+ &nbsp;(29)&nbsp;
+ </font>
+ </span>
+ <br />
+ <a href="/gp/aw/ls/ref=aw_ls?lid=2CCU7K0PHVBZ6">programming</a>
+ <span>
+ <font color="gray">
+ &nbsp;(34)&nbsp;
+ </font>
+ </span>
+ <br />
+ <a href="/gp/aw/ls/ref=aw_ls?lid=32BRN6BOWYVID">Home and stuff</a>
+ <span>
+ <font color="gray">
+ &nbsp;(11)&nbsp;
+ </font>
+ </span>
+ <br />
+ <a href="/gp/aw/ls/ref=aw_ls?lid=2WYRZAFDXJ9C2">Photography</a>
+ <span>
+ <font color="gray">
+ &nbsp;(7)&nbsp;
+ </font>
+ </span>
+ <br />
+ <a href="/gp/aw/ls/ref=aw_ls?lid=1BSEQ7U2E6RBE">Electronics</a>
+ <span>
+ <font color="gray">
+ &nbsp;(4)&nbsp;
+ </font>
+ </span>
+ <br />
+ <a href="/gp/aw/ls/ref=aw_ls?lid=34GLJJOVRPDZU">Patterns</a>
+ <span>
+ <font color="gray">
+ &nbsp;(16)&nbsp;
+ </font>
+ </span>
+ <br />
+ <a href="/gp/aw/ls/ref=aw_ls?lid=20E6BOWWE0J4T"><b><font color='#E47911'>Methodologies</font></b></a>
+ <span>
+ <font color="gray">
+ &nbsp;(35)&nbsp;
+ </font>
+ </span>
+ <br />
+ <a href="/gp/aw/ls/ref=aw_ls?lid=13WMOM3XTAK5G">Business</a>
+ <span>
+ <font color="gray">
+ &nbsp;(47)&nbsp;
+ </font>
+ </span>
+ <br />
+ <a href="/gp/aw/ls/ref=aw_ls?lid=22JADHUMCHCOZ">Psycology</a>
+ <span>
+ <font color="gray">
+ &nbsp;(3)&nbsp;
+ </font>
+ </span>
+ <br />
+ <a href="/gp/aw/ls/ref=aw_ls?lid=1O0W0NU3ZPF1J">PRoductivity</a>
+ <span>
+ <font color="gray">
+ &nbsp;(0)&nbsp;
+ </font>
+ </span>
+ <br />
+ <a href="/gp/aw/ls/ref=aw_ls?lid=MT9A2WI1FL61">Training</a>
+ <span>
+ <font color="gray">
+ &nbsp;(3)&nbsp;
+ </font>
+ </span>
+ <br />
+ <a href="/gp/aw/ls/ref=aw_ls?lid=2P8W7HDF4M6NR">New Wish List</a>
+ <span>
+ <font color="gray">
+ &nbsp;(0)&nbsp;
+ </font>
+ </span>
+ <br />
+ <a href="/gp/aw/ls/ref=aw_ls?lid=2G6OFE9P47AKA">Drawing</a>
+ <span>
+ <font color="gray">
+ &nbsp;(16)&nbsp;
+ </font>
+ </span>
+ <br />
+</div>
+<br />
+
+
+<hr width="100%" color="#808080" size="1" noshade="noshade" />
+<a href="/gp/aw/ls/s/ref=aw_ls_s">Find a Wish List</a>
+<br />
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<b>Customers Who Bought Items in Your Wish List Also Bought:</b><br />
+
+<font size="-1">*&#160;<a href="/gp/aw/d/1430240237/ref=aw_ls1?m=">Pro .NET Best Practices (Paperback)</a> Stephen Ritchie<br />*&#160;<a href="/gp/aw/d/1430242361/ref=aw_ls2?m=">Pro ASP.NET MVC 4 (Professional Apress) (Paperback)</a> Adam Freeman<br />*&#160;<a href="/gp/aw/d/1449312969/ref=aw_ls3?m=">Programming Entity Framework: DbContext (Paperback)</a> Julia Lerman<br />*&#160;<a href="/gp/aw/d/1933988274/ref=aw_ls4?m=">The Art of Unit Testing: with Examples in .NET (Paperback)</a> Roy Osherove<br />*&#160;<a href="/gp/aw/d/0321834577/ref=aw_ls5?m=">Implementing Domain-Driven Design (Hardcover)</a> Vaughn Vernon<br /></font>
+
+
+
+
+<br />
+
+ 
+ 
+
+
+
+
+
+<a name="search_box"></a>
+<form action="/gp/aw/s/ref=is_box_">
+ 
+
+ <b>Search</b>
+
+ <input name="k"
+ maxlength="256"
+ size="15" />
+
+ <input type="submit"
+ value="Go" />
+</form>
+
+ 
+ <hr color="#cccccc" width="100%" size="2" noshade="noshade" />
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/gp/aw/c?ref_=aw_bottom_links_cart">Basket</a><br /><a href="https://www.amazon.co.uk/gp/aw/ya?ref_=aw_bottom_links_ya">Your Account</a><br /><a href="https://www.amazon.co.uk/gp/aw/vsd.html?ref_=aw_bottom_links_1click">1-Click Settings</a><br /><a href="/gp/aw/ls?ref_=aw_bottom_links_wl">Wish List</a><br /><a href="/gp/aw/ls/s?ref_=aw_bottom_links_find">Find a Wish List</a><br /><a href="https://www.amazon.co.uk/gp/flex/aw/so.html?action=sign-out&redirectTo=%2Fgp%2Faw%2Fsi.html">Sign Out</a><br /><a href="/gp/aw/help/id=help?ref_=aw_bottom_links_help">Help</a><br /><a href="/gp/aw">Amazon.co.uk Home</a><br /><a href="/gp/aw/help/?id=lt">Legal Terms</a><br />
+
+ <script type="text/javascript">if(typeof uet === 'function'){(function(t){var w = window;w.awTags = w.awTags || {};w.awTags[t] = w.awTags[t] || (ue.tag(t) && 1)})('pc');uet('be');};</script>
+ <div id='be' style='display:none;visibility:hidden;'><form name='ue_backdetect'><input name='ue_back' value='1' type='hidden'></form><script type="text/javascript">
+(function(b){var a=document.ue_backdetect;if(a&&a.ue_back){b.ue.bfini=a.ue_back.value}if(b.uet){b.uet("be")}if(b.onLdEnd){if(window.addEventListener){window.addEventListener("load",b.onLdEnd,false)}else{if(window.attachEvent){window.attachEvent("onload",b.onLdEnd)}}}if(b.ueh){b.ueh(0,window,"load",b.onLd,1)}})(ue_csm);
+
+
+</script>
+
+<a href='/gp/uedata/unsticky/276-1920306-7243655//ntpoffrw?tepes=1&amp;id=080DY4YVTT34VJ36QBN0'>v</a>
+<noscript>
+     <img src='/gp/uedata/unsticky/276-1920306-7243655//ntpoffrw?noscript&amp;id=080DY4YVTT34VJ36QBN0' />
+     <img src='//fls-eu.amazon.co.uk/1/batch/1/OP/A1F83G8C2ARO7P:276-1920306-7243655:080DY4YVTT34VJ36QBN0$uedata=s:%2Fgp%2Faw%2Fls%2Fref%3Daw_ls_2%2Fuedata%2Funsticky%2F276-1920306-7243655%2FWishlistAW%2Fntpoffrw%3Fnoscript%26id%3D080DY4YVTT34VJ36QBN0:2000' />
+
+</noscript>
+
+
+
+</div>
+<script type='text/javascript'>
+(function(a){a._uec=function(d){var h=window,b=h.performance,f=b?b.navigation.type:0;if(f==0){var e="; expires="+new Date(+new Date+604800000).toGMTString(),c=+new Date-ue_t0;if(c>0){var g="|"+ +new Date;document.cookie="csm-hit="+(d/c).toFixed(2)+g+e+"; path=/"}}}})(ue_csm);
+_uec(33163);
+</script>
+<script type='text/javascript'>
+(function(b,c){var a=c.images;if(a&&a.length){b.ue.count("totalImages",a.length)}})(ue_csm,document);
+</script>
+</body>
+</html>

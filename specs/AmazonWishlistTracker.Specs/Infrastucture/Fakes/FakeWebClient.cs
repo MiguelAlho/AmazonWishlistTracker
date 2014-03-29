@@ -21,8 +21,14 @@ namespace AmazonWishlistTracker.Specs.Infrastucture.Fakes
             string file;
             switch (address.OriginalString)
             {
-                case "http://www.amazon.co.uk/gp/aw/ls":
+                case "http://www.amazon.co.uk/gp/aw/ls":;
                     file = "ls.txt";
+                    break;
+                case "http://www.amazon.co.uk/gp/aw/ls/ref=aw_ls_1?lid=20E6BOWWE0J4T&p=1&reveal=unpurchased&sort=date-added&ty=wishlist":
+                    file = "methedologies_booklist_p1.txt";
+                    break;
+                case "http://www.amazon.co.uk/gp/aw/ls/ref=aw_ls_2?lid=20E6BOWWE0J4T&p=2&reveal=unpurchased&sort=date-added&ty=wishlist":
+                    file = "methedologies_booklist_p2.txt";
                     break;
                 default:
                     throw new ArgumentException("uri is invalid");

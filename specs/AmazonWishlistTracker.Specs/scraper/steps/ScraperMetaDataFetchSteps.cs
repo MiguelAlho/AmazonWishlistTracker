@@ -16,9 +16,10 @@ namespace AmazonWishlistTracker.Specs.scraper.steps
     [Binding]
     public class ScraperMetaDataFetchSteps
     {
+        private WishlistScraperConfiguration config;
         private IWishlistParser client;
         private IList<Wishlist> wishlists;
-        private WishlistScraperConfiguration config;
+        private IList<ScrapedBook> booklist;
 
         [Given(@"I have configured my scraper with:")]
         public void GivenIHaveConfiguredMyScraperWith(Table table)
@@ -54,5 +55,35 @@ namespace AmazonWishlistTracker.Specs.scraper.steps
                 Assert.IsTrue(wishlists.Any(o => o.AwId.ToString() == expectedId && o.Name.ToString() == expectedName), "could not find {0},{1} in list", expectedName, expectedId);
             }
         }
+
+
+        [When(@"I retrieve the book list for the Methodologies wishlist")]
+        public void WhenIRetrieveTheBookListForTheMethodologiesWishlist()
+        {
+            booklist = client.GetBookListForWishlist("20E6BOWWE0J4T");
+        }
+
+        [Then(@"the scraper should find (.*) books in the book list")]
+        public void ThenTheScraperShouldFindBooksInTheBookList(int p0)
+        {
+            Assert.AreEqual(p0, booklist.Count);
+        }
+
+        [Then(@"the scraper should know that there are the following books are in the wishlist's list")]
+        public void ThenTheScraperShouldKnowThatThereAreTheFollowingBooksAreInTheWishlistSList(Table table)
+        {
+            foreach (var row in table.Rows)
+            {
+                var expectedBookId = row[0];
+                var expectedBookName = row[1];
+                var expectedBookPrice = row[2];
+
+                Assert.IsTrue(booklist.Any(o => o.Id.ToString() == expectedBookId 
+                                             && o.Title.ToString() == expectedBookName
+                                             && o.AwPrice.ToString() == expectedBookPrice), 
+                                "could not find {0},{1}, {2} in list", expectedBookId, expectedBookName, expectedBookPrice);
+            }
+        }
+
     }
 }

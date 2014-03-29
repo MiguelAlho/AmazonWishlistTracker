@@ -90,5 +90,48 @@ namespace WishlistScreenScraper.UnitTests.Implementations
             webClientMock.DownloadData(Arg.Any<Uri>()).Returns(bytes);
             return webClientMock;
         }
+
+        [Test]
+        public void CanGetAListOfBooksForAWishlist()
+        {
+            IWishlistParsingDefinitions definitions = new AmazonUKParsingDefinitions();
+            var webClientMock = WebClientMockForBookList();
+
+            IWishlistParser parser = new WishlistParser(definitions, webClientMock);
+            IList<ScrapedBook> books = parser.GetBookListForWishlist("20E6BOWWE0J4T");
+
+            Assert.IsNotNull(books);
+            Assert.IsNotEmpty(books);
+            Assert.AreEqual(35, books.Count);
+
+            ScrapedBook first = books[0];
+            Assert.IsNotNull(first);
+            Assert.AreEqual("0321534468", first.Id);
+            Assert.AreEqual("20E6BOWWE0J4T", first.WishlistId);
+            Assert.AreEqual("Agile Testing: A Practical Guide for Testers and Agile Teams (Addison-Wesley Signature) (Paperback)", first.Title);
+            Assert.IsTrue(first.AwPrice.HasValue);
+            Assert.AreEqual(36.99M, first.AwPrice.Value);
+
+            ScrapedBook nullpricebook = books[2];
+            Assert.IsNotNull(nullpricebook);
+            Assert.AreEqual("0321554132", nullpricebook.Id);
+            Assert.AreEqual("20E6BOWWE0J4T", nullpricebook.WishlistId);
+            Assert.AreEqual("Managing Software Debt: Building for Inevitable Change (Agile Software Development) (Hardcover)", nullpricebook.Title);
+            Assert.IsFalse(nullpricebook.AwPrice.HasValue);
+        }
+
+        private static IWebClient WebClientMockForBookList()
+        {
+            string html1 = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\Data\methedologies_booklist_p1.txt"));
+            string html2 = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\Data\methedologies_booklist_p2.txt"));
+            byte[] bytes1 = System.Text.Encoding.UTF8.GetBytes(html1);
+            byte[] bytes2 = System.Text.Encoding.UTF8.GetBytes(html2);
+
+            IWebClient webClientMock = Substitute.For<IWebClient>();
+            webClientMock.DownloadData(Arg.Is<Uri>(o => o.OriginalString.Contains("&p=1&"))).Returns(bytes1);
+            webClientMock.DownloadData(Arg.Is<Uri>(o => o.OriginalString.Contains("&p=2&"))).Returns(bytes2);
+            return webClientMock;
+        }
+
     }
 }

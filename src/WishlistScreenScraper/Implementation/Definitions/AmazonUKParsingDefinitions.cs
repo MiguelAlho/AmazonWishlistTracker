@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AmazonWishlistTracker.WishlistScreenScraper.Dto;
+using System.Globalization;
 
 namespace AmazonWishlistTracker.WishlistScreenScraper.Implementation.Definitions
 {
@@ -19,14 +20,31 @@ namespace AmazonWishlistTracker.WishlistScreenScraper.Implementation.Definitions
         //<a href="/gp/aw/ls/ref=aw_ls\?lid=(?'amazonId'[A-Z0-9]*)">(?:<b><font color='#[A-F0-9]{6}'>)?(?'wishlistname'[\w\s]*)(?:</font></b>)?</a>
         private readonly Regex wishlistRegex = new Regex(
                 @"<a href=""/gp/aw/ls/ref=aw_ls\?lid=(?'amazonId'[A-Z0-9]*)"">(?:<b><font color='#[A-F0-9]{6}'>)?(?'wishlistname'[\w\s]*)(?:</font></b>)?</a>");
-
         private const string wishklistRegex_name = "wishlistname";
         private const string wishklistRegex_awid = "amazonId";
 
+        ///book regex ref: respect paragraph entries
+        /*
+         * <a href="/gp/aw/d/(?'bookId'[\w]*)/ref=aw_ls_(?:\d*)_(?:\d*)\?colid=(?:[A-Z0-9]*)&coliid=(?:[A-Z0-9]*)">(?'title'[\w\s()-:#.',\[\]]*)</a>
+<br />
+(?: (?:£?)(?'price'[\d\.]*)?)?
+*/
+        private readonly Regex bookListRegex = new Regex(@"<a href=""/gp/aw/d/(?'bookId'[\w]*)/ref=aw_ls_(?:\d*)_(?:\d*)\?colid=(?'wishlistId'[A-Z0-9]*)&coliid=(?:[A-Z0-9]*)"">(?'title'[\w\s()-:#.',[\]]*)</a>
+ <br />
+(?: (?:£?)(?'price'[\d.]*)?)?
+");
+        private const string booklistRegex_id = "bookId";
+        private const string booklistRegex_title = "title";
+        private const string booklistRegex_price = "price";
+        private const string booklistRegex_wishlistId = "wishlistId";
+
+        private readonly Regex bookListPageCountRegex = new Regex(@"<a href=""/gp/aw/ls/ref=aw_ls_(?:\d*)\?lid=(?:[A-Z0-9]*)&p=(?:[0-9]*)&reveal=unpurchased&sort=date-added&ty=wishlist"">(?'page'\d*|Next)</a>");
+            
         #endregion
 
 
         public const string WishlistCollectionUrlString = @"http://www.amazon.co.uk/gp/aw/ls";
+        public const string BookListUrlFormatString = @"http://www.amazon.co.uk/gp/aw/ls/ref=aw_ls_{1}?lid={0}&p={1}&reveal=unpurchased&sort=date-added&ty=wishlist";
 
         public Uri WishlistCollectionUri
         {
@@ -46,5 +64,43 @@ namespace AmazonWishlistTracker.WishlistScreenScraper.Implementation.Definitions
             }
         }
 
+
+        public Uri BookListUriForWishlistAtPage(string wishlistId, int page)
+        {
+            return new Uri(String.Format(BookListUrlFormatString,wishlistId,page));
+        }
+
+        public Regex BookListItemRegex
+        {
+            get { return bookListRegex; }
+        }
+
+        public Regex BookListPageCountRegex
+        {
+            get { return bookListPageCountRegex; }
+        }
+        
+        
+        public Func<Match, ScrapedBook> ScrapedBookMatchMapperFunc
+        {
+            get
+            {
+                //price may not exist due to out of stock conditions for Amazon
+                return new Func<Match, ScrapedBook>(Match =>
+                {
+                    decimal? price = Match.Groups[booklistRegex_price].Success
+                        ? decimal.Parse(Match.Groups[booklistRegex_price].Value, 
+                                        NumberStyles.AllowDecimalPoint, 
+                                        CultureInfo.InvariantCulture)
+                        : null as decimal?;
+
+                    return new ScrapedBook(
+                        Match.Groups[booklistRegex_id].Value.Trim(),
+                        Match.Groups[booklistRegex_wishlistId].Value.Trim(),
+                        Match.Groups[booklistRegex_title].Value.Trim(), 
+                        price);
+                });
+            }
+        }
     }
 }

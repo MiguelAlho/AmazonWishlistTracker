@@ -47,5 +47,29 @@ namespace WishlistScreenScraper.UnitTests.Implementations
 
             Assert.IsNotNull(mapper);
         }
+
+        [TestCase("20E6BOWWE0J4T", 1, "http://www.amazon.co.uk/gp/aw/ls/ref=aw_ls_1?lid=20E6BOWWE0J4T&p=1&reveal=unpurchased&sort=date-added&ty=wishlist")]
+        [TestCase("50E6BOWWE0J4T", 2, "http://www.amazon.co.uk/gp/aw/ls/ref=aw_ls_2?lid=50E6BOWWE0J4T&p=2&reveal=unpurchased&sort=date-added&ty=wishlist")]
+        public void CanGetBookListUriForWishlistAtPage(string wishlist, int page, string expectedUrl)
+        {
+            Uri uri = new AmazonUKParsingDefinitions().BookListUriForWishlistAtPage(wishlist, page);
+
+            Assert.AreEqual(expectedUrl, uri.OriginalString);
+        }
+
+        [Test]
+        public void CanGetBooklistRegex()
+        {
+            var regex = new AmazonUKParsingDefinitions().BookListItemRegex;
+
+            Assert.IsNotNull(regex);
+        }
+
+        [Test]
+        public void CanGetBooklistPageCountRegex()
+        {
+            var regex = new AmazonUKParsingDefinitions().BookListPageCountRegex;
+            Assert.IsNotNull(regex);
+        }
     }
 }

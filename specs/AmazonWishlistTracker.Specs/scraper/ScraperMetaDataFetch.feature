@@ -27,3 +27,17 @@ Scenario: Prepare for book scraping
 	| Training                 | MT9A2WI1FL61	|
 	| Web and UI               | 10MTFE33315HU  |
 	| Wish List                | GKBVZ2B8F57P	|
+
+Scenario: Get list of books in a specific wishlist
+	Given I have configured my scraper with:
+	| AmazonTarget | Email               |
+	| UK           | alho@miguelalho.com |
+	When I retrieve the book list for the Methodologies wishlist
+	Then the scraper should find 35 books in the book list
+	And the scraper should know that there are the following books are in the wishlist's list
+	| bookId     | bookTitle                                                                                           | amazonPrice |
+	| 0321534468 | Agile Testing: A Practical Guide for Testers and Agile Teams (Addison-Wesley Signature) (Paperback) | 36.99       |
+	| 0932633692 | Perfect Software: And Other Illusions About Testing (Paperback)                                     | 18.99       |
+	| 0321554132 | Managing Software Debt: Building for Inevitable Change (Agile Software Development) (Hardcover)     |	         |
+	
+	

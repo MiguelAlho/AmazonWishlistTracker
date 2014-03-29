@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\ScrapedBookTests.cs" />
     <Compile Include="Dto\WishlistTests.cs" />
     <Compile Include="Implementations\Definitions\AmazonUKParsingDefinitionsTests.cs" />
     <Compile Include="Implementations\WishlistParserTests.cs" />
@@ -65,8 +66,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Data\methedologies_booklist_p2.txt" />
     <Content Include="Data\ls_2wishlists.txt" />
     <Content Include="Data\ls.txt" />
+    <Content Include="Data\methedologies_booklist_p1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

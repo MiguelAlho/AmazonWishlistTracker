@@ -142,6 +142,52 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Get list of books in a specific wishlist")]
+        public virtual void GetListOfBooksInASpecificWishlist()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get list of books in a specific wishlist", ((string[])(null)));
+#line 31
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "AmazonTarget",
+                        "Email"});
+            table3.AddRow(new string[] {
+                        "UK",
+                        "alho@miguelalho.com"});
+#line 32
+ testRunner.Given("I have configured my scraper with:", ((string)(null)), table3, "Given ");
+#line 35
+ testRunner.When("I retrieve the book list for the Methodologies wishlist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 36
+ testRunner.Then("the scraper should find 35 books in the book list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "bookId",
+                        "bookTitle",
+                        "amazonPrice"});
+            table4.AddRow(new string[] {
+                        "0321534468",
+                        "Agile Testing: A Practical Guide for Testers and Agile Teams (Addison-Wesley Sign" +
+                            "ature) (Paperback)",
+                        "36.99"});
+            table4.AddRow(new string[] {
+                        "0932633692",
+                        "Perfect Software: And Other Illusions About Testing (Paperback)",
+                        "18.99"});
+            table4.AddRow(new string[] {
+                        "0321554132",
+                        "Managing Software Debt: Building for Inevitable Change (Agile Software Developmen" +
+                            "t) (Hardcover)",
+                        ""});
+#line 37
+ testRunner.And("the scraper should know that there are the following books are in the wishlist\'s " +
+                    "list", ((string)(null)), table4, "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

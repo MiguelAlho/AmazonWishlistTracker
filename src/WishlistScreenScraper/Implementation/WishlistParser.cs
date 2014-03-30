@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Net.Mime;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -125,5 +126,30 @@ namespace AmazonWishlistTracker.WishlistScreenScraper.Implementation
 
             return counter;
         }
+
+
+        public Quote GetBestInternationlOfferFor(string bookId)
+        {
+            var baseuri = definitions.OfferListingUriForBookAtPage(bookId, 1);
+            var html = GetHtmlFromUri(baseuri);
+
+            //break into quote blocks
+            string splitKey = definitions.OfferListingQuoteSplitString;
+            string[] pageBockArray = html.Split(new string[] {splitKey}, 5, StringSplitOptions.None);
+
+            //first block is discardable - second block is first price
+            for (int i = 1; i < pageBockArray.Length; i++)
+            {
+                string textBlock = pageBockArray[i];
+                if (textBlock.Contains(definitions.OfferListingInternationalOffer))
+                {
+                    return definitions.OfferToQuoteMapperFunc(textBlock);
+                    //exit imediately, we don't need to search other prices, for now...
+                }
+                //skip if domestic only...
+            }
+            return null;
+        }
+
     }
 }

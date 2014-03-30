@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\Quote.cs" />
     <Compile Include="Dto\ScrapedBook.cs" />
     <Compile Include="Dto\Wishlist.cs" />
     <Compile Include="Implementation\AmazonTargets.cs" />

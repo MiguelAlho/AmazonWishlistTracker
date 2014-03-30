@@ -18,8 +18,10 @@ namespace AmazonWishlistTracker.Specs.scraper.steps
     {
         private WishlistScraperConfiguration config;
         private IWishlistParser client;
+        
         private IList<Wishlist> wishlists;
         private IList<ScrapedBook> booklist;
+        private Quote sellerPrice;
 
         [Given(@"I have configured my scraper with:")]
         public void GivenIHaveConfiguredMyScraperWith(Table table)
@@ -88,6 +90,32 @@ namespace AmazonWishlistTracker.Specs.scraper.steps
                                 "could not find {0},{1}, {2} in list", expectedBookId, expectedBookName, expectedBookPrice);
             }
         }
+
+        [When(@"I retrieve the best internationl offer the Agile Testing Book")]
+        public void WhenIRetrieveTheBestOfferTheAgileTestingBook()
+        {
+            sellerPrice = client.GetBestInternationlOfferFor("0321534468");
+        }
+
+        [Then(@"the scraper should return:")]
+        public void ThenTheScraperShouldReturn(Table table)
+        {
+            var row = table.Rows[0];
+
+            var expectedBookId = row[0];
+            var expectedPrice = row[1];
+            var expectedSellerName = row[2];
+            var expectedSellerId = row[3];
+            var expectedCondition = row[4];
+
+            Assert.IsNotNull(sellerPrice);
+            Assert.AreEqual(expectedBookId, sellerPrice.BookId);
+            Assert.AreEqual(expectedPrice, sellerPrice.Price);
+            Assert.AreEqual(expectedSellerName, sellerPrice.BookId);
+            Assert.AreEqual(expectedSellerId, sellerPrice.BookId);
+            Assert.AreEqual(expectedCondition, sellerPrice.Condition);
+        }
+
 
     }
 }

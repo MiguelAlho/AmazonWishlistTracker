@@ -157,5 +157,34 @@ namespace WishlistScreenScraper.UnitTests.Implementations
             webClientMock.DownloadData(Arg.Any<Uri>()).Returns(bytes1);
             return webClientMock;
         }
+
+        [Test]
+        public void CanGetBestPriceOfABookFromAnInternationalDealer()
+        {
+            IWishlistParsingDefinitions definitions = new AmazonUKParsingDefinitions();
+            var webClientMock = WebClientMockForSellerPrice();
+            string bookId = "0321534468";
+
+            IWishlistParser parser = new WishlistParser(definitions, webClientMock);
+            Quote quote = parser.GetBestInternationlOfferFor(bookId);
+
+            Assert.IsNotNull(quote);
+            
+            Assert.AreEqual(bookId, quote.BookId);
+            Assert.AreEqual("A3A72FJ03Q9CJT", quote.SellerId);
+            Assert.AreEqual("UKPaperbackshop", quote.SellerName);
+            Assert.AreEqual(21.74M, quote.Price);
+            Assert.AreEqual("New", quote.Condition);
+        }
+
+        private static IWebClient WebClientMockForSellerPrice()
+        {
+            string html1 = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\Data\AllOffers_AgileTesting.txt"));
+            byte[] bytes1 = System.Text.Encoding.UTF8.GetBytes(html1);
+
+            IWebClient webClientMock = Substitute.For<IWebClient>();
+            webClientMock.DownloadData(Arg.Any<Uri>()).Returns(bytes1);
+            return webClientMock;
+        }
     }
 }

@@ -40,4 +40,11 @@ Scenario: Get list of books in a specific wishlist
 	| 0932633692 | Perfect Software: And Other Illusions About Testing (Paperback)                                     | 18.99       |
 	| 0321554132 | Managing Software Debt: Building for Inevitable Change (Agile Software Development) (Hardcover)     |	         |
 	
-	
+Scenario: Get the best international offer for a book
+	Given I have configured my scraper with:
+	| AmazonTarget | Email               |
+	| UK           | alho@miguelalho.com | 
+	When I retrieve the best internationl offer the Agile Testing Book
+	Then the scraper should return:
+	| bookId     | price | seller          | sellerId       | condition |
+	| 0321534468 | 21.64 | UKPaperbackshop | A3A72FJ03Q9CJT | New       |

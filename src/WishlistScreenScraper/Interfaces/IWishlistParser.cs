@@ -7,6 +7,6 @@ namespace AmazonWishlistTracker.WishlistScreenScraper.Interfaces
     {
         IList<Wishlist> GetWishlistsForUser(string userEmail);
         IList<ScrapedBook> GetBookListForWishlist(string wishlistId);
-
+        Quote GetBestInternationlOfferFor(string bookId);
     }
 }

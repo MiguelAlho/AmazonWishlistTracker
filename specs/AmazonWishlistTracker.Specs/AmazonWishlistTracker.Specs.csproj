@@ -72,6 +72,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Files\AllOffers_AgileTesting.txt" />
     <Content Include="Files\ls.txt" />
     <Content Include="Files\methedologies_booklist_p1.txt" />
     <Content Include="Files\methedologies_booklist_p2.txt" />

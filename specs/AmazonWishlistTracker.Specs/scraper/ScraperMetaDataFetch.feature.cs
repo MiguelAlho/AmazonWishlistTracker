@@ -205,6 +205,43 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Get the best international offer for a book")]
+        public virtual void GetTheBestInternationalOfferForABook()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get the best international offer for a book", ((string[])(null)));
+#line 43
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "AmazonTarget",
+                        "Email"});
+            table5.AddRow(new string[] {
+                        "UK",
+                        "alho@miguelalho.com"});
+#line 44
+ testRunner.Given("I have configured my scraper with:", ((string)(null)), table5, "Given ");
+#line 47
+ testRunner.When("I retrieve the best internationl offer the Agile Testing Book", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                        "bookId",
+                        "price",
+                        "seller",
+                        "sellerId",
+                        "condition"});
+            table6.AddRow(new string[] {
+                        "0321534468",
+                        "21.64",
+                        "UKPaperbackshop",
+                        "A3A72FJ03Q9CJT",
+                        "New"});
+#line 48
+ testRunner.Then("the scraper should return:", ((string)(null)), table6, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

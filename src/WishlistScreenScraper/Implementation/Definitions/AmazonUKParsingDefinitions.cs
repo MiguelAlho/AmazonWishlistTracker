@@ -50,7 +50,9 @@ namespace AmazonWishlistTracker.WishlistScreenScraper.Implementation.Definitions
 
         public const string WishlistCollectionUrlString = @"http://www.amazon.co.uk/gp/aw/ls";
         public const string BookListUrlFormatString = @"http://www.amazon.co.uk/gp/aw/ls/ref=aw_ls_{1}?lid={0}&p={1}&reveal=unpurchased&sort=date-added&ty=wishlist";
+        public const string OfferListingFormatString = @"http://www.amazon.co.uk/gp/offer-listing/{0}/sr=/qid=/ref=olp_page_{1}?ie=UTF8&colid=&coliid=&condition=all&me=&qid=&shipPromoFilter=0&sort=sip&sr=&startIndex={2}";
 
+        
         public Uri WishlistCollectionUri
         {
             get { return new Uri(WishlistCollectionUrlString); }
@@ -108,6 +110,49 @@ namespace AmazonWishlistTracker.WishlistScreenScraper.Implementation.Definitions
                         Match.Groups[booklistRegex_wishlistId].Value.Trim(),
                         Match.Groups[booklistRegex_title].Value.Trim(), 
                         price);
+                });
+            }
+        }
+
+
+        public Uri OfferListingUriForBookAtPage(string bookId, int page)
+        {
+            return new Uri(String.Format(OfferListingFormatString, bookId, page, (page-1)*10));
+        }
+
+        public string OfferListingQuoteSplitString
+        {
+            get { return @"<span class=""a-size-large a-color-price olpOfferPrice a-text-bold"">"; }
+        }
+        
+        public string OfferListingInternationalOffer
+        {
+            get { return "International & domestic delivery rates"; }
+        }
+
+        public Func<string, Quote> OfferToQuoteMapperFunc
+        {
+            get
+            {
+                //price may not exist due to out of stock conditions for Amazon
+                return new Func<string, Quote>(textBlock =>
+                {
+                    var priceText = new Regex(@"£(?'price'[\d.]*)").Match(textBlock).Groups["price"].Value.Trim();
+                    decimal price = decimal.Parse(priceText, NumberStyles.AllowDecimalPoint,
+                        CultureInfo.InvariantCulture);
+
+                    var condition = new Regex(@"olpCondition"">(?'condition'[\w\s]*)</h3>").Match(textBlock).Groups["condition"].Value.Trim();
+                    
+                    Regex sellerRegex = new Regex(@"<a href=""/gp/aag/main/ref=olp_merch_name_(?:\d*)\?ie=UTF8&amp;asin=(?'bookId'[\w]*)&amp;isAmazonFulfilled=(?:\d)&amp;seller=(?'sellerId'[\w]*)"">(?'sellerName'[\w\s-_]*)</a>");
+                    Match match = sellerRegex.Match(textBlock);
+                    var sellerId = match.Groups["sellerId"].Value.Trim();
+                    var sellerName = match.Groups["sellerName"].Value.Trim();
+                    var bookId = match.Groups["bookId"].Value.Trim();
+
+                    Quote quote = new Quote(bookId, sellerId, sellerName, price, condition);
+
+                    return quote;
+
                 });
             }
         }

@@ -71,5 +71,22 @@ namespace WishlistScreenScraper.UnitTests.Implementations
             var regex = new AmazonUKParsingDefinitions().BookListPageCountRegex;
             Assert.IsNotNull(regex);
         }
+
+        [TestCase("0321534468", 1, "http://www.amazon.co.uk/gp/offer-listing/0321534468/sr=/qid=/ref=olp_page_1?ie=UTF8&colid=&coliid=&condition=all&me=&qid=&shipPromoFilter=0&sort=sip&sr=&startIndex=0")]
+        [TestCase("0321534468", 2, "http://www.amazon.co.uk/gp/offer-listing/0321534468/sr=/qid=/ref=olp_page_2?ie=UTF8&colid=&coliid=&condition=all&me=&qid=&shipPromoFilter=0&sort=sip&sr=&startIndex=10")]
+        public void CanGetOfferListingUriForBookAtPage(string bookId, int page, string expectedUrl)
+        {
+            Uri uri = new AmazonUKParsingDefinitions().OfferListingUriForBookAtPage(bookId, page);
+
+            Assert.AreEqual(expectedUrl, uri.OriginalString);
+        }
+
+        [Test]
+        public void CanGetOfferToQuoteMatchMapper()
+        {
+            var mapper = new AmazonUKParsingDefinitions().OfferToQuoteMapperFunc;
+
+            Assert.IsNotNull(mapper);
+        }
     }
 }

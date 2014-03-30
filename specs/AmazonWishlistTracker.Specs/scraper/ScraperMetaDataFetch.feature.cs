@@ -233,7 +233,7 @@ this.ScenarioSetup(scenarioInfo);
                         "condition"});
             table6.AddRow(new string[] {
                         "0321534468",
-                        "21.64",
+                        "21.74",
                         "UKPaperbackshop",
                         "A3A72FJ03Q9CJT",
                         "New"});

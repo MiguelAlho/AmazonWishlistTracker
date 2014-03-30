@@ -47,4 +47,4 @@ Scenario: Get the best international offer for a book
 	When I retrieve the best internationl offer the Agile Testing Book
 	Then the scraper should return:
 	| bookId     | price | seller          | sellerId       | condition |
-	| 0321534468 | 21.64 | UKPaperbackshop | A3A72FJ03Q9CJT | New       |
+	| 0321534468 | 21.74 | UKPaperbackshop | A3A72FJ03Q9CJT | New       |

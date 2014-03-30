@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Globalization;
+using System.Linq;
 using AmazonWishlistTracker.WishlistScreenScraper.Implementation;
 using System;
 using System.Net;
@@ -103,7 +104,7 @@ namespace AmazonWishlistTracker.Specs.scraper.steps
             var row = table.Rows[0];
 
             var expectedBookId = row[0];
-            var expectedPrice = row[1];
+            var expectedPrice = decimal.Parse(row[1], NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture);
             var expectedSellerName = row[2];
             var expectedSellerId = row[3];
             var expectedCondition = row[4];
@@ -111,8 +112,8 @@ namespace AmazonWishlistTracker.Specs.scraper.steps
             Assert.IsNotNull(sellerPrice);
             Assert.AreEqual(expectedBookId, sellerPrice.BookId);
             Assert.AreEqual(expectedPrice, sellerPrice.Price);
-            Assert.AreEqual(expectedSellerName, sellerPrice.BookId);
-            Assert.AreEqual(expectedSellerId, sellerPrice.BookId);
+            Assert.AreEqual(expectedSellerName, sellerPrice.SellerName);
+            Assert.AreEqual(expectedSellerId, sellerPrice.SellerId);
             Assert.AreEqual(expectedCondition, sellerPrice.Condition);
         }
 

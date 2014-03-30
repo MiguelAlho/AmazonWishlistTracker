@@ -30,6 +30,9 @@ namespace AmazonWishlistTracker.Specs.Infrastucture.Fakes
                 case "http://www.amazon.co.uk/gp/aw/ls/ref=aw_ls_2?lid=20E6BOWWE0J4T&p=2&reveal=unpurchased&sort=date-added&ty=wishlist":
                     file = "methedologies_booklist_p2.txt";
                     break;
+                case "http://www.amazon.co.uk/gp/offer-listing/0321534468/sr=/qid=/ref=olp_page_1?ie=UTF8&colid=&coliid=&condition=all&me=&qid=&shipPromoFilter=0&sort=sip&sr=&startIndex=0":
+                    file = "AllOffers_AgileTesting.txt";
+                    break;
                 default:
                     throw new ArgumentException("uri is invalid");
             }

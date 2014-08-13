@@ -1,5 +1,9 @@
 # Amazon Wishlist Tracker
 
+---
+ I'll (probably) no longer continue this block because I (fortunately) found www.camelcamelcamel.com that does this and does it very well!
+---
+
 This project is a sort of spike to work on a couple of 
 things AND solve a personal itch. 
 
@@ -24,7 +28,7 @@ to apply the ideas presented by the above.
 ## Functional Motivations
 
 I tend to buy alot of books on Amazon.co.uk (since I'm in Portugal). 
-Amazon ships to Portugal with free shipping for orders above £25; Affiliates 
+Amazon ships to Portugal with free shipping for orders above Â£25; Affiliates 
 have a fixed price for shipping ( aprox. #4.5 per book). Sometimes the 
 diference between prices justifies purchasing though Amazon, sometimes through 
 affiliates. I generally don't mind buying used books - must of the times, the
